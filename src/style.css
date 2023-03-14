@@ -91,6 +91,7 @@ button:hover {
     width: 100%;
     z-index: 2;
     background: var(--main-color);
+    box-shadow: -5px 9px 19px -12px #00000073;
 }
 
 .header .content {
@@ -99,13 +100,32 @@ button:hover {
     justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+    .header .content {
+        flex-direction: column;
+    }
+}
+
 .header .content img {
-    width: 8%;
-    margin-bottom: 10px;
+    width: 6%;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .header .content img {
+        width: 15%;
+    }
 }
 
 .header .content h3 {
     color: var(--darkest);
+}
+
+@media (max-width: 768px) {
+    .header .content h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
 }
 
 /* End Header */
@@ -142,6 +162,12 @@ button:hover {
     color: white;
     width: 18%;
     font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .landing button a {
+        width: 30%;
+    }
 }
 
 /* End Landing */
