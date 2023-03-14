@@ -1,0 +1,30 @@
+/* Start Global Rules */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+:root {
+    --back-color: #fff;
+    --light-red: #dd0436;
+    --dark-red: #b8002a;
+    --yello: #ffba00;
+    --orange: #ff8e00;
+    --dark: #383838;
+    --darker: #252525;
+    --darkest: #131313;
+    --transition-default: 0.2s;
+    --shadow-color: #00000038;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
