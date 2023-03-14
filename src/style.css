@@ -1,13 +1,20 @@
 /* Start Global Rules */
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Cairo', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
+    --main-color: #eee;
     --back-color: #fff;
     --light-red: #dd0436;
     --dark-red: #b8002a;
@@ -20,7 +27,53 @@
     --shadow-color: #00000038;
 }
 
-button, input {
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small  */
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media(min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
     border: none;
     outline: none;
 }
@@ -28,3 +81,63 @@ button, input {
 button:hover {
     opacity: 0.8;
 }
+
+/* End Global Rules */
+
+/* Start Header */
+.header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: var(--main-color);
+}
+
+.header .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .content img {
+    width: 8%;
+    margin-bottom: 10px;
+}
+
+.header .content h3 {
+    color: var(--darkest);
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+    background-image: url(../img/landing.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+.landing button a {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    border-radius: 15px;
+    background-color: var(--dark-red);
+    color: white;
+    width: 18%;
+    font-size: 1rem;
+}
+
+/* End Landing */
