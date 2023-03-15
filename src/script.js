@@ -192,16 +192,31 @@ const questions = [
         }
     }, 
 ]
+const langBtn = document.getElementById("language");
 const score = 0;
 const language = 'arapic'
 const questionConstainer = document.getElementById('question-constainer')
 
-function prepareQuestion(e) {
-    const index = Math.floor(Math.random() * questions.length)
-    postQuestion(questions[index][language])
+function prepareQuestion() {
+    let index = Math.floor(Math.random() * questions.length)
+    let quest = questions[index]
+    postQuestion(quest['arapic'])
+    langBtn.addEventListener('click', changeLanguage(quest))
     questions.splice(index, 1)
 }
 
+function changeLanguage(quest) {
+    if (langBtn.innerHTML === 'English') {
+        langBtn.innerHTML = 'العربية'
+        postQuestion(quest['arapic'])
+
+    } else {
+        langBtn.innerHTML = 'English'
+        postQuestion(quest['english'])
+    }
+}
+
+prepareQuestion()
 function postQuestion(question) {
     questionConstainer.innerHTML = `
     <div class="question">${question.question}</div>
