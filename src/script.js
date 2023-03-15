@@ -192,4 +192,22 @@ const questions = [
         }
     }, 
 ]
+
+const questionConstainer = document.getElementById('question-constainer')
+
+function postQuestion(question) {
+    questionConstainer.innerHTML = `
+    <div class="question">${question.question}</div>
+    <div class="options">
+        <div class="option">${question.options[0]}</div>
+        <div class="option">${question.options[1]}</div>
+        <div class="option">${question.options[2]}</div>
+        <div class="option">${question.options[3]}</div>
+    </div>
+    `
+}
 console.log(questions.length)
+
+    document.getElementById("next").addEventListener('click', (e) => {
+        console.log('ssss')
+    })
