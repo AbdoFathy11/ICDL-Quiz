@@ -72,7 +72,11 @@ li {
 a {
     text-decoration: none;
 }
-button {cursor: pointer;}
+
+button {
+    cursor: pointer;
+}
+
 button,
 input {
     border: none;
@@ -258,14 +262,14 @@ button:hover {
 
 .question-constainer {
     width: 100%;
-    position: fixed;
-    top: 50%;
-    transform: translate(0,-50%);
+    /* position: fixed; */
     padding: 30px;
+    height: 100vh;
 }
+
 .question-constainer .question {
     text-align: center;
-    font-size: 50px;
+    font-size: 1.8rem;
     font-weight: 400;
     padding: 20px;
     margin: 20px;
@@ -311,8 +315,9 @@ button:hover {
     .question-constainer {
         top: 55%;
     }
+
     .question-constainer .question {
-    font-size: 35px;
+        font-size: 35px;
     }
 }
 
@@ -320,19 +325,24 @@ button:hover {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 1rem;
 }
+
 .actions button {
     padding: 5px 20px;
     border-radius: 10px;
     font-size: 30px;
     font-weight: 400;
 }
+
 .actions button#next {
     background-color: var(--green-red);
 }
+
 .actions button#next:disabled {
     background-color: var(--dark);
     cursor: not-allowed;
     color: white;
 }
+
 /* End Question [ exam.html ] file */
