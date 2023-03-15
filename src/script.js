@@ -209,5 +209,7 @@ function postQuestion(question) {
 console.log(questions.length)
 
     document.getElementById("next").addEventListener('click', (e) => {
-        console.log('ssss')
+        const index = Math.floor(Math.random() * questions.length)
+        postQuestion(questions[index]['arapic'])
+        questions.splice(index, 1)
     })
