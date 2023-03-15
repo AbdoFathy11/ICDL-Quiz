@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Start Global Rules */
 
 *,
@@ -347,7 +346,6 @@ button:hover {
 }
 
 /* End Question [ exam.html ] file */
-=======
 /* Start Global Rules */
 
 *,
@@ -422,7 +420,11 @@ li {
 a {
     text-decoration: none;
 }
-button {cursor: pointer;}
+
+button {
+    cursor: pointer;
+}
+
 button,
 input {
     border: none;
@@ -611,6 +613,7 @@ button:hover {
     height: calc(100vh - 110px);
     padding: 30px;
 }
+
 @media (max-width : 992px) {
     .question-constainer {
         height: calc(100vh - 100px)
@@ -622,6 +625,7 @@ button:hover {
         height: calc(100vh - 120px)
     }
 }
+
 .question-constainer .question {
     text-align: center;
     font-size: 50px;
@@ -670,8 +674,9 @@ button:hover {
     .question-constainer {
         top: 55%;
     }
+
     .question-constainer .question {
-    font-size: 35px;
+        font-size: 35px;
     }
 }
 
@@ -680,19 +685,22 @@ button:hover {
     display: flex;
     justify-content: space-around;
 }
+
 .actions button {
     padding: 5px 20px;
     border-radius: 10px;
     font-size: 30px;
     font-weight: 400;
 }
+
 .actions button#next {
     background-color: var(--green-red);
 }
+
 .actions button#next:disabled {
     background-color: var(--dark);
     cursor: not-allowed;
     color: white;
 }
+
 /* End Question [ exam.html ] file */
->>>>>>> cf5b6bb0055aa76ebf918d020d345a633a33330d
