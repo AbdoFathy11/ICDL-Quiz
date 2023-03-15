@@ -258,10 +258,19 @@ button:hover {
 
 .question-constainer {
     width: 100%;
-    position: fixed;
-    top: 50%;
-    transform: translate(0,-50%);
+    height: calc(100vh - 110px);
     padding: 30px;
+}
+@media (max-width : 992px) {
+    .question-constainer {
+        height: calc(100vh - 100px)
+    }
+}
+
+@media (max-width : 768px) {
+    .question-constainer {
+        height: calc(100vh - 120px)
+    }
 }
 .question-constainer .question {
     text-align: center;

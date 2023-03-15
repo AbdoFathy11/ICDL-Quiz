@@ -192,8 +192,15 @@ const questions = [
         }
     }, 
 ]
-
+const score = 0;
+const language = 'arapic'
 const questionConstainer = document.getElementById('question-constainer')
+
+function prepareQuestion(e) {
+    const index = Math.floor(Math.random() * questions.length)
+    postQuestion(questions[index][language])
+    questions.splice(index, 1)
+}
 
 function postQuestion(question) {
     questionConstainer.innerHTML = `
@@ -208,8 +215,4 @@ function postQuestion(question) {
 }
 console.log(questions.length)
 
-    document.getElementById("next").addEventListener('click', (e) => {
-        const index = Math.floor(Math.random() * questions.length)
-        postQuestion(questions[index]['arapic'])
-        questions.splice(index, 1)
-    })
+    document.getElementById("next").addEventListener('click', prepareQuestion)
