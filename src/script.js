@@ -259,10 +259,12 @@ console.log(questions.length)
             document.getElementById("next").innerHTML = 'Submit'
             language = 'english'
             postQuestion(randomQuestion)
+            questionConstainer.style.direction = 'ltr'
         } else {
             e.target.innerHTML = 'العربية';
             document.getElementById("next").innerHTML = 'تأكيد'
             language = 'arapic'
+            questionConstainer.style.direction = 'rtl'
             postQuestion(randomQuestion)
         }
     })
