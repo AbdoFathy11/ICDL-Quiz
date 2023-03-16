@@ -339,7 +339,7 @@ button:hover {
     background-color: var(--green-red);
 }
 
-.actions button#next:disabled {
+.actions button#next:disabled, .actions button#previous:disabled{
     background-color: var(--dark);
     cursor: not-allowed;
     color: white;

@@ -192,7 +192,8 @@ const questions = [
         }
     }, 
 ]
-
+let previuos = []
+let prevLenght
 const questionConstainer = document.getElementById('question-constainer')
 let score = 0
 let answer
@@ -200,26 +201,45 @@ let randomQuestion
 let language = 'arapic'
 let prevQues = []
 function postQuestion(question) {
-    const thequestion = question[language]
-    console.log(thequestion)
-    questionConstainer.innerHTML = `
-    <div class="question">${thequestion.question}</div>
-    <div class="options">
-        <div class="option" data-id="0">${thequestion.options[0]}</div>
-        <div class="option" data-id="1">${thequestion.options[1]}</div>
-        <div class="option" data-id="2">${thequestion.options[2]}</div>
-        <div class="option" data-id="3">${thequestion.options[3]}</div>
-    </div>
-    `
-    const optionElements = document.querySelectorAll(".option");
-    optionElements.forEach((optionElement) => {
-      optionElement.addEventListener("click", () => {
-        optionElements.forEach((a) => {a.style.backgroundColor = "#eee";})
-        optionElement.style.backgroundColor = "#ff8e00";
-        answer = +optionElement.getAttribute('data-id')
-        console.log(answer)
-      });
-    });
+    if (prevLenght) {
+        document.getElementById("previous").removeAttribute('disabled')
+        } else if (prevLenght < 1){
+            document.getElementById("previous").setAttribute('disabled', "")
+        }
+    if (!question) return
+    if (question[1] >= 0) {
+        const thequestion = question[0][language]
+        const ans = question[1]
+        questionConstainer.innerHTML = `
+        <div class="question">${thequestion.question}</div>
+        <div class="options">
+            <div class="option" ${(thequestion.correctAnswer == 0)? 'style="background: #04dd71;"': (ans == 0 && ans != answer)?'style="background: #b8002a;"': ''  }data-id="0">${thequestion.options[0]}</div>
+            <div class="option" ${(thequestion.correctAnswer == 1)? 'style="background: #04dd71;"': (ans == 1 && ans != answer)?'style="background: #b8002a;"': ''  } data-id="1">${thequestion.options[1]}</div>
+            <div class="option" ${(thequestion.correctAnswer == 2)? 'style="background: #04dd71;"': (ans == 2 && ans != answer)?'style="background: #b8002a;"': ''  } data-id="2">${thequestion.options[2]}</div>
+            <div class="option" ${(thequestion.correctAnswer == 3)? 'style="background: #04dd71;"': (ans == 3 && ans != answer)?'style="background: #b8002a;"': ''  } data-id="3">${thequestion.options[3]}</div>
+        </div>
+        `
+    } else {
+        const thequestion = question[language]
+        questionConstainer.innerHTML = `
+        <div class="question">${thequestion.question}</div>
+        <div class="options">
+            <div class="option" data-id="0">${thequestion.options[0]}</div>
+            <div class="option" data-id="1">${thequestion.options[1]}</div>
+            <div class="option" data-id="2">${thequestion.options[2]}</div>
+            <div class="option" data-id="3">${thequestion.options[3]}</div>
+        </div>
+        `
+        const optionElements = document.querySelectorAll(".option");
+        optionElements.forEach((optionElement) => {
+          optionElement.addEventListener("click", () => {
+            optionElements.forEach((a) => {a.style.backgroundColor = "#eee";})
+            optionElement.style.backgroundColor = "#ff8e00";
+            answer = +optionElement.getAttribute('data-id')
+            document.getElementById("next").removeAttribute('disabled')
+          });
+        });
+    }
     return question
 }
 function generateQuestion() {
@@ -228,30 +248,50 @@ function generateQuestion() {
     questions.splice(index, 1)
 
 }
-console.log(questions.length)
-
     document.getElementById("next").addEventListener('click', (e) => {
-        const optionElements = document.querySelectorAll(".option");
-        console.log(randomQuestion.arapic);
-        if (answer !== randomQuestion[language]['correctAnswer']) {
-            --score
-            optionElements.forEach((optionElement) => {
-                if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
-                    optionElement.style.backgroundColor = "#04dd71";
-                } else if (+optionElement.getAttribute('data-id') === answer){
-                    optionElement.style.backgroundColor = "#b8002a";
-                }
-            });
-        } 
-        optionElements.forEach((optionElement) => {
-            if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
-                optionElement.style.backgroundColor = "#04dd71";
+        document.getElementById("previous").removeAttribute('disabled')
+        if (prevLenght < previuos.length) {
+            postQuestion(previuos[prevLenght])
+            prevLenght++
+            if (prevLenght >= previuos.length) {
+            document.getElementById("previous").setAttribute('disabled', "")
             }
-        });
-        setTimeout(() => {
-            generateQuestion()
-            postQuestion(randomQuestion)
-        }, 1000)
+        } else {
+            if (answer) {
+                const optionElements = document.querySelectorAll(".option");
+                if (answer !== randomQuestion[language]['correctAnswer']) {
+                    --score
+                    optionElements.forEach((optionElement) => {
+                        if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
+                            optionElement.style.backgroundColor = "#04dd71";
+                        } else if (+optionElement.getAttribute('data-id') === answer){
+                            optionElement.style.backgroundColor = "#b8002a";
+                        }
+                    });
+                } 
+                optionElements.forEach((optionElement) => {
+                    if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
+                        optionElement.style.backgroundColor = "#04dd71";
+                    }
+                });
+                setTimeout(() => {
+                    previuos.push([randomQuestion, answer])
+                    answer = null
+                    generateQuestion()
+                    postQuestion(randomQuestion)
+                    prevLenght = previuos.length
+                    console.log(previuos);
+                    document.getElementById("next").setAttribute('disabled', "")
+                }, 1000)
+            } else {
+                answer = null
+                generateQuestion()
+                postQuestion(randomQuestion)
+                prevLenght = previuos.length
+                console.log(previuos);
+                document.getElementById("next").setAttribute('disabled', "")
+            }
+        }
     })
     document.getElementById('language').addEventListener("click", e => {
         if (language === 'arapic') {
@@ -270,3 +310,16 @@ console.log(questions.length)
     })
     generateQuestion()
     postQuestion(randomQuestion)
+
+    document.getElementById("previous").addEventListener("click", () => {
+        console.log(postQuestion(previuos[prevLenght - 1]))
+        if (prevLenght > 0) {
+            document.getElementById("next").removeAttribute('disabled')
+            answer = null
+            postQuestion(previuos[prevLenght - 1])
+            prevLenght--
+        } else {
+            alert("هذا أول الامتحان")
+        }
+
+    })
