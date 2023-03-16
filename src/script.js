@@ -252,10 +252,10 @@ function generateQuestion() {
             alert(`score: ${score}`)
         }
         if (prevLenght < previuos.length) {
-            prevLenght++
+            ++prevLenght
             postQuestion(previuos[prevLenght])
         } else {
-            if (answer >= 0) {
+            if (answer || answer === 0) {
                 const optionElements = document.querySelectorAll(".option");
                 if (answer !== randomQuestion[language]['correctAnswer']) {
                     --score
@@ -282,11 +282,8 @@ function generateQuestion() {
                     document.getElementById("next").setAttribute('disabled', "")
                 }, 1000)
             } else {
-                answer = null
-                generateQuestion()
                 postQuestion(randomQuestion)
-                prevLenght = previuos.length
-                console.log(previuos);
+                answer = null
                 document.getElementById("next").setAttribute('disabled', "")
             }
         }
@@ -310,10 +307,9 @@ function generateQuestion() {
     })
     
     document.getElementById("previous").addEventListener("click", () => {
-        console.log(postQuestion(previuos[prevLenght - 1]))
+        answer = null
         if (prevLenght > 0) {
             document.getElementById("next").removeAttribute('disabled')
-            answer = null
             postQuestion(previuos[prevLenght - 1])
             --prevLenght
         } else {
