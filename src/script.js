@@ -201,7 +201,8 @@ let answer = null
 let randomQuestion
 let language = 'arapic'
 let prevQues = []
-
+const nextBtn = document.getElementById("next")
+const prevBtn = document.getElementById("previous")
 
 function postQuestion(question) {
     if (!question) return
@@ -235,7 +236,7 @@ function postQuestion(question) {
             optionElement.style.backgroundColor = "#ff8e00";
             answer = +optionElement.getAttribute('data-id')
             console.log(answer)
-            document.getElementById("next").removeAttribute('disabled')
+            nextBtn.removeAttribute('disabled')
           });
         });
     }
@@ -247,13 +248,13 @@ function generateQuestion() {
     questions.splice(index, 1)
 
 }
-    document.getElementById("next").addEventListener('click', (e) => {
+    nextBtn.addEventListener('click', (e) => {
         if (questions.length === 0) {
             alert(`score: ${score}`)
         }
         if (prevLenght < previuos.length) {
-            ++prevLenght
             postQuestion(previuos[prevLenght])
+            prevLenght++
         } else {
             if (answer || answer === 0) {
                 const optionElements = document.querySelectorAll(".option");
@@ -279,37 +280,37 @@ function generateQuestion() {
                     postQuestion(randomQuestion)
                     prevLenght = previuos.length
                     console.log(previuos);
-                    document.getElementById("next").setAttribute('disabled', "")
+                    nextBtn.setAttribute('disabled', "")
                 }, 1000)
             } else {
                 postQuestion(randomQuestion)
                 answer = null
-                document.getElementById("next").setAttribute('disabled', "")
+                nextBtn.setAttribute('disabled', "")
             }
         }
     })
     document.getElementById('language').addEventListener("click", e => {
             if (language === 'arapic') {
                 e.target.innerHTML = 'English';
-                document.getElementById("previous").innerHTML = 'Previous'
-                document.getElementById("next").innerHTML = 'Next'
+                prevBtn.innerHTML = 'Previous'
+                nextBtn.innerHTML = 'Next'
                 language = 'english'
                 postQuestion(randomQuestion)
                 questionConstainer.style.direction = 'ltr'
             } else {
                 e.target.innerHTML = 'العربية';
-                document.getElementById("next").innerHTML = 'التالي'
-                document.getElementById("previous").innerHTML = 'السابق'
+                nextBtn.innerHTML = 'التالي'
+                prevBtn.innerHTML = 'السابق'
                 language = 'arapic'
                 questionConstainer.style.direction = 'rtl'
                 postQuestion(randomQuestion)
             }
     })
     
-    document.getElementById("previous").addEventListener("click", () => {
+    prevBtn.addEventListener("click", () => {
         answer = null
         if (prevLenght > 0) {
-            document.getElementById("next").removeAttribute('disabled')
+            nextBtn.removeAttribute('disabled')
             postQuestion(previuos[prevLenght - 1])
             --prevLenght
         } else {
