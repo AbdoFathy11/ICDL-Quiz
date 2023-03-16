@@ -109,7 +109,7 @@ const questions = [
     }, 
     {
         arapic: {
-            question: "أي من الأقؤاص الصلبة يًعد أكبر سعة تخزينية ؟",
+            question: "أي من الأقراص الصلبة يًعد أكبر سعة تخزينية ؟",
             options: ["قرص بسعة 100 ميجابايت", "قرص بسعة 10000 كيلوبايت", "قرص بسعة 1 تيرابايت", "قرص بسعة 300 جيجابايت"],
             correctAnswer: 2
                },
@@ -192,20 +192,18 @@ const questions = [
         }
     }, 
 ]
+
 let previuos = []
 let prevLenght
 const questionConstainer = document.getElementById('question-constainer')
-let score = 0
-let answer
+let score = 15
+let answer = null
 let randomQuestion
 let language = 'arapic'
 let prevQues = []
+
+
 function postQuestion(question) {
-    if (prevLenght) {
-        document.getElementById("previous").removeAttribute('disabled')
-        } else if (prevLenght < 1){
-            document.getElementById("previous").setAttribute('disabled', "")
-        }
     if (!question) return
     if (question[1] >= 0) {
         const thequestion = question[0][language]
@@ -236,6 +234,7 @@ function postQuestion(question) {
             optionElements.forEach((a) => {a.style.backgroundColor = "#eee";})
             optionElement.style.backgroundColor = "#ff8e00";
             answer = +optionElement.getAttribute('data-id')
+            console.log(answer)
             document.getElementById("next").removeAttribute('disabled')
           });
         });
@@ -249,15 +248,14 @@ function generateQuestion() {
 
 }
     document.getElementById("next").addEventListener('click', (e) => {
-        document.getElementById("previous").removeAttribute('disabled')
+        if (questions.length === 0) {
+            alert(`score: ${score}`)
+        }
         if (prevLenght < previuos.length) {
-            postQuestion(previuos[prevLenght])
             prevLenght++
-            if (prevLenght >= previuos.length) {
-            document.getElementById("previous").setAttribute('disabled', "")
-            }
+            postQuestion(previuos[prevLenght])
         } else {
-            if (answer) {
+            if (answer >= 0) {
                 const optionElements = document.querySelectorAll(".option");
                 if (answer !== randomQuestion[language]['correctAnswer']) {
                     --score
@@ -294,32 +292,33 @@ function generateQuestion() {
         }
     })
     document.getElementById('language').addEventListener("click", e => {
-        if (language === 'arapic') {
-            e.target.innerHTML = 'English';
-            document.getElementById("next").innerHTML = 'Submit'
-            language = 'english'
-            postQuestion(randomQuestion)
-            questionConstainer.style.direction = 'ltr'
-        } else {
-            e.target.innerHTML = 'العربية';
-            document.getElementById("next").innerHTML = 'تأكيد'
-            language = 'arapic'
-            questionConstainer.style.direction = 'rtl'
-            postQuestion(randomQuestion)
-        }
+            if (language === 'arapic') {
+                e.target.innerHTML = 'English';
+                document.getElementById("previous").innerHTML = 'Previous'
+                document.getElementById("next").innerHTML = 'Next'
+                language = 'english'
+                postQuestion(randomQuestion)
+                questionConstainer.style.direction = 'ltr'
+            } else {
+                e.target.innerHTML = 'العربية';
+                document.getElementById("next").innerHTML = 'التالي'
+                document.getElementById("previous").innerHTML = 'السابق'
+                language = 'arapic'
+                questionConstainer.style.direction = 'rtl'
+                postQuestion(randomQuestion)
+            }
     })
-    generateQuestion()
-    postQuestion(randomQuestion)
-
+    
     document.getElementById("previous").addEventListener("click", () => {
         console.log(postQuestion(previuos[prevLenght - 1]))
         if (prevLenght > 0) {
             document.getElementById("next").removeAttribute('disabled')
             answer = null
             postQuestion(previuos[prevLenght - 1])
-            prevLenght--
+            --prevLenght
         } else {
             alert("هذا أول الامتحان")
         }
-
     })
+    generateQuestion()
+    postQuestion(randomQuestion)
