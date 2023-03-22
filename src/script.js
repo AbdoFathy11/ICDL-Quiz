@@ -248,8 +248,8 @@ function generateQuestion() {
     questions.splice(index, 1)
 
 }
-nextBtn.addEventListener('click', (e) => {
-    if (questions.length === 0) {
+nextBtn.addEventListener('click',(e) => {
+    if (questions.length === 0) { 
         alert(`score: ${score}`)
     }
     if (prevLenght < previuos.length) {
@@ -268,18 +268,17 @@ nextBtn.addEventListener('click', (e) => {
                     }
                 });
             }
-            optionElements.forEach((optionElement) => {
-                if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
-                    optionElement.style.backgroundColor = "#04dd71";
-                }
-            });
+            // optionElements.forEach((optionElement) => {
+            //     if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
+            //         optionElement.style.backgroundColor = "#04dd71";
+            //     }
+            // });
             setTimeout(() => {
                 previuos.push([randomQuestion, answer])
                 answer = null
                 generateQuestion()
                 postQuestion(randomQuestion)
                 prevLenght = previuos.length
-                console.log(previuos);
                 nextBtn.setAttribute('disabled', "")
             }, 1000)
         } else {
