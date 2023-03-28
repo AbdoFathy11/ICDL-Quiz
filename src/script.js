@@ -191,12 +191,204 @@ const questions = [
             correctAnswer: 2
         }
     },
+    {
+        arapic: {
+            question: "إذا أردت محاذاة للفقرة المحددة یسار تستخدم مفتاحى  Ctrl + x",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "If you want to align the selected paragraph to the left, use the Ctrl + x keys",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "أحدث إصدار نظام تشغیل من الإصدارات الآتیة هو  Windows 8.1",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "The latest operating system version of the following versions is Windows 8.1",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "كل ما یلى یعتبر من منافذ الكمبیوتر (Ports ) عدا  UPS",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "All of the following are considered computer ports (Ports) except UPS",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+        {
+        arapic: {
+            question: "لكى یحق استخدام أحد تطبیقات برامج الكمبیوتر لابد من توفر رخصة",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "In order to have the right to use a computer software application, a license must be available",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "وظیفة الباور سبلاى هى توصیل من خمسة إلى ١٢ فولت لكل أجزاء الكمبیوتر كل مكان حسب حاجته",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "The function of the power supply is to connect from five to 12 volts to all parts of the computer, every place according to its need",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "یتعرف نظام التشغیل على نوعیة الملفات من Extension",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "The operating system recognizes the file type from Extension",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "عند حذف ملف من الوسیط التخزینى فإنه یرسل إلى سلة المحذوفات فى حالة وجوده فى USP drive",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "When a file is deleted from the storage medium, it is sent to the Recycle Bin if it is in the USP drive.",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: " یحتفظ الكمبیوتر بالمعلومات والبرامج التى تستخدم فى بدء التشغیل من خلال ذاكرة Hard disk",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "The computer maintains the information and programs that are used to start it through the hard disk memory",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "یمكن استدعاء المساعدة فى نظام التشغیل عن طریق F9",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "Help can be called up in the operating system via F9",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "یمكن أخذ صورة من الشاشة عن طریق Print screen",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "A picture can be taken from the screen via Print screen",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "لنقل رمز موجود على سطح المكتب باستخدام إجراء الفأرة Drag and Drop",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "Move an icon on the desktop using the Drag and Drop mouse action",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "للتحكم فى عرض المجلدات المخفیة نستخدم Folder option",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "To control the display of hidden folders, we use the Folder option",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "بایت واحد یعادل 8bit",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "One byte is equivalent to 8bit",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
+    {
+        arapic: {
+            question: "لبیانات المخزنة باسم على القرص تسمى Drivers",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "The data stored under a name on the disk is called Drivers",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "بایت واحد یعادل لحفظ ملف نستخدم Save فقط",
+            options: ["صح", "خطأ"],
+            correctAnswer: 1
+        },
+        english: {
+            question: "To save a file we just use Save",
+            options: ["True", "False"],
+            correctAnswer: 1
+        }
+    },
+    {
+        arapic: {
+            question: "لملف الذى یتم تغییر شكله Folder",
+            options: ["صح", "خطأ"],
+            correctAnswer: 0
+        },
+        english: {
+            question: "The file whose format is changed is Folder",
+            options: ["True", "False"],
+            correctAnswer: 0
+        }
+    },
 ]
-
+console.log(questions.length)
 let previuos = []
 let prevLenght
 const questionConstainer = document.getElementById('question-constainer')
-let score = 15
+let score = 32
 let answer = null
 let randomQuestion
 let language = 'arapic'
@@ -209,33 +401,52 @@ function postQuestion(question) {
     if (question[1] >= 0) {
         const thequestion = question[0][language]
         const ans = question[1]
-        questionConstainer.innerHTML = `
-        <div class="question">${thequestion.question}</div>
-        <div class="options">
-            <div class="option" ${(thequestion.correctAnswer == 0) ? 'style="background: #04dd71;"' : (ans == 0 && ans != answer) ? 'style="background: #b8002a;"' : ''}data-id="0">${thequestion.options[0]}</div>
-            <div class="option" ${(thequestion.correctAnswer == 1) ? 'style="background: #04dd71;"' : (ans == 1 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="1">${thequestion.options[1]}</div>
-            <div class="option" ${(thequestion.correctAnswer == 2) ? 'style="background: #04dd71;"' : (ans == 2 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="2">${thequestion.options[2]}</div>
-            <div class="option" ${(thequestion.correctAnswer == 3) ? 'style="background: #04dd71;"' : (ans == 3 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="3">${thequestion.options[3]}</div>
-        </div>
-        `
+        if (thequestion.options.length === 2) {
+            questionConstainer.innerHTML = `
+            <div class="question">${thequestion.question}</div>
+            <div class="options">
+                <div class="option" ${(thequestion.correctAnswer == 0) ? 'style="background: #04dd71;"' : (ans == 0 && ans != answer) ? 'style="background: #b8002a;"' : ''}data-id="0">${thequestion.options[0]}</div>
+                <div class="option" ${(thequestion.correctAnswer == 1) ? 'style="background: #04dd71;"' : (ans == 1 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="1">${thequestion.options[1]}</div>
+            </div>
+            `
+        } else {
+            questionConstainer.innerHTML = `
+            <div class="question">${thequestion.question}</div>
+            <div class="options">
+                <div class="option" ${(thequestion.correctAnswer == 0) ? 'style="background: #04dd71;"' : (ans == 0 && ans != answer) ? 'style="background: #b8002a;"' : ''}data-id="0">${thequestion.options[0]}</div>
+                <div class="option" ${(thequestion.correctAnswer == 1) ? 'style="background: #04dd71;"' : (ans == 1 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="1">${thequestion.options[1]}</div>
+                <div class="option" ${(thequestion.correctAnswer == 2) ? 'style="background: #04dd71;"' : (ans == 2 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="2">${thequestion.options[2]}</div>
+                <div class="option" ${(thequestion.correctAnswer == 3) ? 'style="background: #04dd71;"' : (ans == 3 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="3">${thequestion.options[3]}</div>
+            </div>
+            `
+        }
     } else {
         const thequestion = question[language]
-        questionConstainer.innerHTML = `
-        <div class="question">${thequestion.question}</div>
-        <div class="options">
-            <div class="option" data-id="0">${thequestion.options[0]}</div>
-            <div class="option" data-id="1">${thequestion.options[1]}</div>
-            <div class="option" data-id="2">${thequestion.options[2]}</div>
-            <div class="option" data-id="3">${thequestion.options[3]}</div>
-        </div>
-        `
+        if (thequestion.options.length === 2) {
+            questionConstainer.innerHTML = `
+            <div class="question">${thequestion.question}</div>
+            <div class="options">
+                <div class="option" data-id="0">${thequestion.options[0]}</div>
+                <div class="option" data-id="1">${thequestion.options[1]}</div>
+            </div>
+            `
+        } else {
+            questionConstainer.innerHTML = `
+            <div class="question">${thequestion.question}</div>
+            <div class="options">
+                <div class="option" data-id="0">${thequestion.options[0]}</div>
+                <div class="option" data-id="1">${thequestion.options[1]}</div>
+                <div class="option" data-id="2">${thequestion.options[2]}</div>
+                <div class="option" data-id="3">${thequestion.options[3]}</div>
+            </div>
+            `
+        }
         const optionElements = document.querySelectorAll(".option");
         optionElements.forEach((optionElement) => {
             optionElement.addEventListener("click", () => {
                 optionElements.forEach((a) => { a.style.backgroundColor = "#eee"; })
                 optionElement.style.backgroundColor = "#ff8e00";
                 answer = +optionElement.getAttribute('data-id')
-                console.log(answer)
                 nextBtn.removeAttribute('disabled')
             });
         });
@@ -268,11 +479,11 @@ nextBtn.addEventListener('click',(e) => {
                     }
                 });
             }
-            // optionElements.forEach((optionElement) => {
-            //     if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
-            //         optionElement.style.backgroundColor = "#04dd71";
-            //     }
-            // });
+            optionElements.forEach((optionElement) => {
+                if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
+                    optionElement.style.backgroundColor = "#04dd71";
+                }
+            });
             setTimeout(() => {
                 previuos.push([randomQuestion, answer])
                 answer = null
