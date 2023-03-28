@@ -135,9 +135,15 @@ button:hover {
     color: var(--darkest);
 }
 
+@media (max-width: 992px) {
+    .header .content h3 {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .header .content h3 {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         margin-bottom: 5px;
     }
 }
@@ -149,12 +155,18 @@ button:hover {
     width: 100%;
     /* position: fixed; */
     padding: 30px;
-    /* height: 84vh; */
+    height: 110vh;
+}
+
+@media (max-width: 768px) {
+    .question-constainer {
+        height: 120%;
+    }
 }
 
 .question-constainer .question {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 400;
     padding: 20px;
     margin: 20px;
@@ -186,7 +198,7 @@ button:hover {
 
 @media (max-width: 992px) {
     .question-constainer .question {
-        font-size: 45px;
+        font-size: 1.2rem;
     }
 }
 
@@ -196,13 +208,13 @@ button:hover {
     }
 }
 
-@media (width < 768px) {
+@media (max-width: 768px) {
     .question-constainer {
-        top: 55%;
+        padding: 0;
     }
 
     .question-constainer .question {
-        font-size: 35px;
+        font-size: 28px;
     }
 }
 
@@ -287,10 +299,21 @@ button:hover {
 
 }
 
+@media (max-width :768px) {
+    .timer {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width :768px) {
+    .timer h1 {
+        font-size: 20px;
+    }
+}
+
 /* Start Footer  */
 .footer {
     background-color: var(--darkest);
-    position: relative;
 }
 
 .footer .container p {
@@ -304,6 +327,12 @@ button:hover {
     bottom: 0;
     right: 0;
     width: 100%; */
+}
+
+@media (max-width: 768px) {
+    .footer .container p {
+        font-size: 0.6rem;
+    }
 }
 
 /* End Footer */

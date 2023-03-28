@@ -335,18 +335,18 @@ const questions = [
             correctAnswer: 0
         }
     },
-    {
-        arapic: {
-            question: "بایت واحد یعادل 8bit",
-            options: ["صح", "خطأ"],
-            correctAnswer: 0
-        },
-        english: {
-            question: "One byte is equivalent to 8bit",
-            options: ["True", "False"],
-            correctAnswer: 0
-        }
-    },
+    // {
+    //     arapic: {
+    //         question: "بایت واحد یعادل 8bit",
+    //         options: ["صح", "خطأ"],
+    //         correctAnswer: 0
+    //     },
+    //     english: {
+    //         question: "One byte is equivalent to 8bit",
+    //         options: ["True", "False"],
+    //         correctAnswer: 0
+    //     }
+    // },
     {
         arapic: {
             question: "البیانات المخزنة باسم على القرص تسمى Drivers",
@@ -538,7 +538,7 @@ function secondsToTime(seconds) {
 
     return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
 }
-let timer = 130;
+let timer = 180;
 const timerDiv = document.querySelector('.timer')
 
 setInterval(() => {
