@@ -252,6 +252,12 @@ button:hover {
     justify-content: space-around;
 }
 
+@media (max-width: 768px) {
+    .result-container {
+        text-align: center;
+    }
+}
+
 .result-container .container .box {
     display: flex;
     flex-direction: column;
@@ -262,7 +268,10 @@ button:hover {
     background-color: #eee;
     padding: 2rem 0;
     box-shadow: 3px 9px 20px 0px #00000073;
+    gap: 10px;
+    margin-bottom: 0.8rem;
 }
+
 
 .result-container .container .result {
     background-color: var(--dark-purple);
@@ -272,6 +281,12 @@ button:hover {
     font-size: 5rem;
 }
 
+@media (max-width: 768px) {
+    .result-container .container .result {
+        font-size: 2rem;
+    }
+}
+
 .re {
     display: flex;
     flex-direction: column;
@@ -279,11 +294,12 @@ button:hover {
 }
 
 .re button {
-    padding: 20px;
+    padding: 10px 10px;
     border-radius: 10px;
     border: 3px solid var(--dark-purple);
     color: var(--dark-purple);
     transition: var(--transition-default);
+    margin-top: 1rem;
 }
 
 .re button:hover {
