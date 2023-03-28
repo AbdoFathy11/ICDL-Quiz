@@ -31,7 +31,7 @@ html {
 body {
     font-family: 'Cairo', sans-serif;
     direction: rtl;
-    margin: 0 0 100px 0;
+    /* margin: 0 0 100px 0; */
 }
 
 .container {
@@ -290,6 +290,7 @@ button:hover {
 /* Start Footer  */
 .footer {
     background-color: var(--darkest);
+    position: relative;
 }
 
 .footer .container p {
@@ -299,10 +300,10 @@ button:hover {
     background-color: var(--darkest);
     color: var(--main-color);
     padding: 1rem 0;
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 100%; */
 }
 
 /* End Footer */

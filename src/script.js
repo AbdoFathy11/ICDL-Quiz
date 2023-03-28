@@ -504,13 +504,6 @@ document.getElementById('language').addEventListener("click", e => {
         language = 'english'
         postQuestion(randomQuestion)
         questionContainer.style.direction = 'ltr'
-        document.querySelector(".footer").innerHTML = `
-        <div class="container">
-        <p>
-        all rights are saved © <span>Higher Institute of Commercial Sciences and Computer</span>
-        </p>
-    </div>
-        `
     } else {
         e.target.innerHTML = 'العربية';
         nextBtn.innerHTML = 'التالي'
@@ -518,13 +511,6 @@ document.getElementById('language').addEventListener("click", e => {
         language = 'arapic'
         questionContainer.style.direction = 'rtl'
         postQuestion(randomQuestion)
-        document.querySelector(".footer").innerHTML = `
-        <div class="container">
-            <p>
-                جميع الحقوق محفوظة © <span>المعهد العالى للعلوم التجارية والحاسب الالى</span>
-            </p>
-        </div>
-        `
     }
 })
 
@@ -552,7 +538,7 @@ function secondsToTime(seconds) {
 
     return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
 }
-let timer = 3;
+let timer = 130;
 const timerDiv = document.querySelector('.timer')
 
 setInterval(() => {
@@ -564,7 +550,7 @@ setInterval(() => {
         timerDiv.style.color = `rgb(${300 - timer}, 0, 0)`
         timerDiv.style.border = `3px solid rgb(${300 - timer}, 0, 0)`
     } else {
-        if (document.querySelector(".question-constainer")) document.querySelector(".question-constainer").remove()
+        document.querySelector(".question-constainer").remove()
         percent = score * 100 / 32
         resultContainer.innerHTML = `
         <div class="container">
