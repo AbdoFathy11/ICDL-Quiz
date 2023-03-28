@@ -384,63 +384,43 @@ const questions = [
         }
     },
 ]
-console.log(questions.length)
+const questionContainer = document.getElementById('question-constainer')
+const nextBtn = document.getElementById("next")
+const prevBtn = document.getElementById("previous")
+const resultContainer = document.getElementById("result-container")
+
 let previuos = []
 let prevLenght
-const questionConstainer = document.getElementById('question-constainer')
-let score = 32
+let score = 0
 let answer = null
 let randomQuestion
 let language = 'arapic'
-let prevQues = []
-const nextBtn = document.getElementById("next")
-const prevBtn = document.getElementById("previous")
 
 function postQuestion(question) {
     if (!question) return
     if (question[1] >= 0) {
         const thequestion = question[0][language]
         const ans = question[1]
-        if (thequestion.options.length === 2) {
-            questionConstainer.innerHTML = `
-            <div class="question">${thequestion.question}</div>
-            <div class="options">
-                <div class="option" ${(thequestion.correctAnswer == 0) ? 'style="background: #04dd71;"' : (ans == 0 && ans != answer) ? 'style="background: #b8002a;"' : ''}data-id="0">${thequestion.options[0]}</div>
-                <div class="option" ${(thequestion.correctAnswer == 1) ? 'style="background: #04dd71;"' : (ans == 1 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="1">${thequestion.options[1]}</div>
-            </div>
-            `
-        } else {
-            questionConstainer.innerHTML = `
-            <div class="question">${thequestion.question}</div>
-            <div class="options">
-                <div class="option" ${(thequestion.correctAnswer == 0) ? 'style="background: #04dd71;"' : (ans == 0 && ans != answer) ? 'style="background: #b8002a;"' : ''}data-id="0">${thequestion.options[0]}</div>
-                <div class="option" ${(thequestion.correctAnswer == 1) ? 'style="background: #04dd71;"' : (ans == 1 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="1">${thequestion.options[1]}</div>
-                <div class="option" ${(thequestion.correctAnswer == 2) ? 'style="background: #04dd71;"' : (ans == 2 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="2">${thequestion.options[2]}</div>
-                <div class="option" ${(thequestion.correctAnswer == 3) ? 'style="background: #04dd71;"' : (ans == 3 && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="3">${thequestion.options[3]}</div>
-            </div>
-            `
-        }
+        const optionsHTML = thequestion.options
+        .map((option, index) => {
+            return `<div class="option" ${(thequestion.correctAnswer == index) ? 'style="background: #04dd71;"' : (ans == index && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="${index}">${option}</div>`;
+        })
+        .join('');
+        questionContainer.innerHTML = `
+        <div class="question">${thequestion.question}</div>
+        <div class="options">${optionsHTML}</div>
+    `;
     } else {
         const thequestion = question[language]
-        if (thequestion.options.length === 2) {
-            questionConstainer.innerHTML = `
+        const optionsHTML = thequestion.options
+            .map((option, index) => {
+                return `<div class="option" data-id="${index}">${option}</div>`;
+            })
+            .join('');
+        questionContainer.innerHTML = `
             <div class="question">${thequestion.question}</div>
-            <div class="options">
-                <div class="option" data-id="0">${thequestion.options[0]}</div>
-                <div class="option" data-id="1">${thequestion.options[1]}</div>
-            </div>
-            `
-        } else {
-            questionConstainer.innerHTML = `
-            <div class="question">${thequestion.question}</div>
-            <div class="options">
-                <div class="option" data-id="0">${thequestion.options[0]}</div>
-                <div class="option" data-id="1">${thequestion.options[1]}</div>
-                <div class="option" data-id="2">${thequestion.options[2]}</div>
-                <div class="option" data-id="3">${thequestion.options[3]}</div>
-            </div>
-            `
-        }
+            <div class="options">${optionsHTML}</div>
+        `;
         const optionElements = document.querySelectorAll(".option");
         optionElements.forEach((optionElement) => {
             optionElement.addEventListener("click", () => {
@@ -460,8 +440,23 @@ function generateQuestion() {
 
 }
 nextBtn.addEventListener('click',(e) => {
+    if (answer === randomQuestion[language].correctAnswer) score++
     if (questions.length === 0) { 
-        alert(`score: ${score}`)
+        document.querySelector(".question-constainer").remove()
+        percent = score * 100 / 32
+        resultContainer.innerHTML = `
+        <div class="container">
+            <h1>النتيجة النهائية</h1>
+            <h1 class="result">${percent}%</h1>
+            <p>لقد حصلت على ${score} نقطة من 32 نقطة حيث يساوي ${percent}%</p>
+            <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
+            <div class="re">
+                <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
+                <button id="reload-btn">مرة أًخرى</button>
+            </div>
+        </div>
+        `
+        document.getElementById("reload-btn").addEventListener('click', () => location.reload())
     }
     if (prevLenght < previuos.length) {
         postQuestion(previuos[prevLenght])
@@ -470,7 +465,7 @@ nextBtn.addEventListener('click',(e) => {
         if (answer || answer === 0) {
             const optionElements = document.querySelectorAll(".option");
             if (answer !== randomQuestion[language]['correctAnswer']) {
-                --score
+                
                 optionElements.forEach((optionElement) => {
                     if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
                         optionElement.style.backgroundColor = "#04dd71";
@@ -506,13 +501,13 @@ document.getElementById('language').addEventListener("click", e => {
         nextBtn.innerHTML = 'Next'
         language = 'english'
         postQuestion(randomQuestion)
-        questionConstainer.style.direction = 'ltr'
+        questionContainer.style.direction = 'ltr'
     } else {
         e.target.innerHTML = 'العربية';
         nextBtn.innerHTML = 'التالي'
         prevBtn.innerHTML = 'السابق'
         language = 'arapic'
-        questionConstainer.style.direction = 'rtl'
+        questionContainer.style.direction = 'rtl'
         postQuestion(randomQuestion)
     }
 })
@@ -529,3 +524,44 @@ prevBtn.addEventListener("click", () => {
 })
 generateQuestion()
 postQuestion(randomQuestion)
+
+function secondsToTime(seconds) {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+  
+    const paddedHours = hours.toString().padStart(2, '0');
+    const paddedMinutes = minutes.toString().padStart(2, '0');
+    const paddedSeconds = remainingSeconds.toString().padStart(2, '0');
+  
+    return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
+  }
+let timer = 180
+const timerDiv = document.querySelector('.timer') 
+
+setInterval(() => {
+    if (timer > 0) {
+        timer--
+        timerDiv.innerHTML = `
+        <h1>${secondsToTime(timer)}</h1>
+        `
+        timerDiv.style.color = `rgb(${300 - timer}, 0, 0)`
+        timerDiv.style.border = `3px solid rgb(${300 - timer}, 0, 0)`
+    } else {
+        document.querySelector(".question-constainer").remove()
+        percent = score * 100 / 32
+        resultContainer.innerHTML = `
+        <div class="container">
+            <h1>النتيجة النهائية</h1>
+            <h1 class="result">${percent}%</h1>
+            <p>لقد حصلت على ${score} نقطة من 32 نقطة حيث يساوي ${percent}%</p>
+            <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
+            <div class="re">
+                <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
+                <button id="reload-btn">مرة أًخرى</button>
+            </div>
+        </div>
+        `
+        document.getElementById("reload-btn").addEventListener('click', () => location.reload())
+    }
+}, 1000)
