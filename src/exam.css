@@ -148,7 +148,7 @@ button:hover {
     width: 100%;
     /* position: fixed; */
     padding: 30px;
-    height: 100vh;
+    /* height: 84vh; */
 }
 
 .question-constainer .question {
@@ -297,11 +297,8 @@ button:hover {
     align-items: center;
     background-color: var(--darkest);
     color: var(--main-color);
-    position: fixed;
-    bottom: 0;
     padding: 1rem 0;
-    width: 100%;
-    right: 0;
+    margin-top: 2rem;
 }
 
 /* End Footer */
