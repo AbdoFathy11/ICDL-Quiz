@@ -443,7 +443,7 @@ nextBtn.addEventListener('click', (e) => {
     if (answer === randomQuestion[language].correctAnswer) score++
     if (questions.length === 0) {
         document.querySelector(".question-constainer").remove()
-        percent = score * 100 / 32
+        percent = score * 100 / 31
         resultContainer.innerHTML = `
         <div class="container">
             <div class="box">
