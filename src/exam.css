@@ -237,7 +237,6 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: calc(100vh - 110px);
 }
 
 .result-container .container .box {
@@ -298,7 +297,11 @@ button:hover {
     align-items: center;
     background-color: var(--darkest);
     color: var(--main-color);
+    position: fixed;
+    bottom: 0;
     padding: 1rem 0;
+    width: 100%;
+    right: 0;
 }
 
 /* End Footer */
