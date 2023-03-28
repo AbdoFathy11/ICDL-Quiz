@@ -446,13 +446,15 @@ nextBtn.addEventListener('click', (e) => {
         percent = score * 100 / 32
         resultContainer.innerHTML = `
         <div class="container">
-            <h1>النتيجة النهائية</h1>
-            <h1 class="result">${percent}%</h1>
-            <p>لقد حصلت على ${score} نقطة من 32 نقطة حيث يساوي ${percent}%</p>
-            <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
-            <div class="re">
-                <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
-                <button id="reload-btn">مرة أًخرى</button>
+            <div class="box">
+                <h1>النتيجة النهائية</h1>
+                <h1 class="result">${percent}%</h1>
+                <p>لقد حصلت على ${score} نقطة من 15 نقطة حيث يساوي ${percent}%</p>
+                <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
+                <div class="re">
+                    <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
+                    <button id="reload-btn">مرة أًخرى</button>
+                </div>
             </div>
         </div>
         `
@@ -536,7 +538,7 @@ function secondsToTime(seconds) {
 
     return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
 }
-let timer = 180;
+let timer = 3;
 const timerDiv = document.querySelector('.timer')
 
 setInterval(() => {
@@ -552,13 +554,15 @@ setInterval(() => {
         percent = score * 100 / 32
         resultContainer.innerHTML = `
         <div class="container">
-            <h1>النتيجة النهائية</h1>
-            <h1 class="result">${percent}%</h1>
-            <p>لقد حصلت على ${score} نقطة من 32 نقطة حيث يساوي ${percent}%</p>
-            <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
-            <div class="re">
-                <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
-                <button id="reload-btn">مرة أًخرى</button>
+            <div class="box">
+                <h1>النتيجة النهائية</h1>
+                <h1 class="result">${percent}%</h1>
+                <p>لقد حصلت على ${score} نقطة من 15 نقطة حيث يساوي ${percent}%</p>
+                <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
+                <div class="re">
+                    <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
+                    <button id="reload-btn">مرة أًخرى</button>
+                </div>
             </div>
         </div>
         `
