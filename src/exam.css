@@ -239,25 +239,33 @@ button:hover {
     justify-content: space-around;
     height: calc(100vh - 110px);
 }
-.result-container .container {
+
+.result-container .container .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 60%;
+    border: 1px solid var(--dark-purple);
+    background-color: #eee;
+    padding: 2rem 0;
+    box-shadow: 3px 9px 20px 0px #00000073;
 }
+
 .result-container .container .result {
     background-color: var(--dark-purple);
     padding: 30px;
     border-radius: 50%;
     color: white;
-    font-size:5rem;
+    font-size: 5rem;
 }
+
 .re {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .re button {
     padding: 20px;
     border-radius: 10px;
@@ -265,6 +273,7 @@ button:hover {
     color: var(--dark-purple);
     transition: var(--transition-default);
 }
+
 .re button:hover {
     color: white;
     background-color: var(--dark-purple);
@@ -277,3 +286,19 @@ button:hover {
     border-radius: 10px;
 
 }
+
+/* Start Footer */
+.footer {
+    background-color: var(--darkest);
+}
+
+.footer .container p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkest);
+    color: var(--main-color);
+    padding: 1rem 0;
+}
+
+/* End Footer */

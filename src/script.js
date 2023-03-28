@@ -227,7 +227,7 @@ const questions = [
             correctAnswer: 0
         }
     },
-        {
+    {
         arapic: {
             question: "لكى یحق استخدام أحد تطبیقات برامج الكمبیوتر لابد من توفر رخصة",
             options: ["صح", "خطأ"],
@@ -349,7 +349,7 @@ const questions = [
     },
     {
         arapic: {
-            question: "لبیانات المخزنة باسم على القرص تسمى Drivers",
+            question: "البیانات المخزنة باسم على القرص تسمى Drivers",
             options: ["صح", "خطأ"],
             correctAnswer: 1
         },
@@ -373,7 +373,7 @@ const questions = [
     },
     {
         arapic: {
-            question: "لملف الذى یتم تغییر شكله Folder",
+            question: "الملف الذى یتم تغییر شكله Folder",
             options: ["صح", "خطأ"],
             correctAnswer: 0
         },
@@ -402,10 +402,10 @@ function postQuestion(question) {
         const thequestion = question[0][language]
         const ans = question[1]
         const optionsHTML = thequestion.options
-        .map((option, index) => {
-            return `<div class="option" ${(thequestion.correctAnswer == index) ? 'style="background: #04dd71;"' : (ans == index && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="${index}">${option}</div>`;
-        })
-        .join('');
+            .map((option, index) => {
+                return `<div class="option" ${(thequestion.correctAnswer == index) ? 'style="background: #04dd71;"' : (ans == index && ans != answer) ? 'style="background: #b8002a;"' : ''} data-id="${index}">${option}</div>`;
+            })
+            .join('');
         questionContainer.innerHTML = `
         <div class="question">${thequestion.question}</div>
         <div class="options">${optionsHTML}</div>
@@ -439,9 +439,9 @@ function generateQuestion() {
     questions.splice(index, 1)
 
 }
-nextBtn.addEventListener('click',(e) => {
+nextBtn.addEventListener('click', (e) => {
     if (answer === randomQuestion[language].correctAnswer) score++
-    if (questions.length === 0) { 
+    if (questions.length === 0) {
         document.querySelector(".question-constainer").remove()
         percent = score * 100 / 32
         resultContainer.innerHTML = `
@@ -465,7 +465,7 @@ nextBtn.addEventListener('click',(e) => {
         if (answer || answer === 0) {
             const optionElements = document.querySelectorAll(".option");
             if (answer !== randomQuestion[language]['correctAnswer']) {
-                
+
                 optionElements.forEach((optionElement) => {
                     if (+optionElement.getAttribute('data-id') === randomQuestion[language].correctAnswer) {
                         optionElement.style.backgroundColor = "#04dd71";
@@ -529,15 +529,15 @@ function secondsToTime(seconds) {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const remainingSeconds = seconds % 60;
-  
+
     const paddedHours = hours.toString().padStart(2, '0');
     const paddedMinutes = minutes.toString().padStart(2, '0');
     const paddedSeconds = remainingSeconds.toString().padStart(2, '0');
-  
+
     return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
-  }
-let timer = 180
-const timerDiv = document.querySelector('.timer') 
+}
+let timer = 180;
+const timerDiv = document.querySelector('.timer')
 
 setInterval(() => {
     if (timer > 0) {
