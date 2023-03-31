@@ -754,7 +754,7 @@ function secondsToTime(seconds) {
 
   return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`
 }
-let timer = 60
+let timer = 300
 const timerDiv = document.querySelector('.timer')
 
 const timing = setInterval(() => {
