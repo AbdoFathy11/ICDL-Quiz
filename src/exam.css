@@ -160,7 +160,7 @@ button:hover {
 
 @media (max-width: 768px) {
     .question-constainer {
-        height: 120%;
+        height: 100vh;
     }
 }
 
@@ -352,3 +352,13 @@ button:hover {
 }
 
 /* End Footer */
+textarea {
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    resize: none;
+    margin: 15px 0;
+    box-shadow: 1px 1px 5px 0px #00000073;
+    padding: 10px;
+    font-size: 1.2rem;
+}

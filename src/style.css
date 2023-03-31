@@ -290,7 +290,7 @@ button:hover {
 
 .wave-bg {
     overflow: hidden;
-    height: 650px;
+    height: 100vh;
     position: relative;
     z-index: 1;
 }
