@@ -542,7 +542,6 @@ const writing = {
     'It is a collection of integrated devices that input, process, output, and store data and information. Computer systems are currently built around at least one digital processing device. There are five main hardware components in a computer system: input devices, processing devices, storage devices, output devices, and communication devices.',
     },
     };
-document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
     console.log(questions.length);
 
     function levenshteinDistance(a, b) {
@@ -576,6 +575,8 @@ document.getElementById("writing-in").addEventListener('input',(e) => (e.target.
         return matrix[b.length][a.length];
       }
 let writingAns;
+let writingPoints;
+let writingCorrAns;
 const questionContainer = document.getElementById('question-constainer')
 const nextBtn = document.getElementById('next')
 const prevBtn = document.getElementById('previous')
@@ -589,15 +590,19 @@ let randomQuestion
 let language = 'arapic'
 
 function postQuestion(question) {
-    if (e.target.getAttribute("data-id") === "writing") {
+
+  if (!question) {
+    if (nextBtn.getAttribute("data-id") === "writing") {
         questionContainer.innerHTML = `
-        <div class="question">ما هو تعريف الحاسوب ومكوناته؟</div>
+        <div class="question">${writing[language]["question"]}</div>
         <div class="options">
-            <textarea id="writing-in" cols="30" rows="4" placeholder="إكتب إجابتك هنا!"></textarea>
+            <textarea id="writing-in" cols="30" rows="4" placeholder="${(language == "english")?"write your answer here !": "أكتب إجابتك هنا!"}"></textarea>
         </div>
         `
+    document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
     } 
-  if (!question) return
+    return
+  }
   if (question[1] >= 0) {
     const thequestion = question[0][language]
     const ans = question[1]
@@ -649,9 +654,11 @@ function generateQuestion() {
 nextBtn.addEventListener('click', (e) => {
     if (e.target.getAttribute("data-id") === "writing") {
         const userAnswer = document.getElementById("writing-in").value;
-        const distance = levenshteinDistance(writing[language]['answer'], userAnswer);
+        writingAns = userAnswer
+        writingCorrAns = writing[language]['answer']
+        const distance = levenshteinDistance(writingCorrAns, userAnswer);
         score += Math.floor((266 - distance) / 13) 
-        console.log(score);
+        writingPoints = score
         e.target.removeAttribute("data-id");
         generateQuestion();
         postQuestion(randomQuestion);
@@ -747,7 +754,7 @@ function secondsToTime(seconds) {
 
   return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`
 }
-let timer = 300
+let timer = 60
 const timerDiv = document.querySelector('.timer')
 
 const timing = setInterval(() => {
@@ -768,14 +775,33 @@ function getResult() {
     document.querySelector('.question-constainer').remove()
   if (document.querySelector('.footer'))
     document.querySelector('.footer').remove()
-  percent = (score * 100) / 32
-  resultContainer.innerHTML = `
-    <div class="container">
+  percent = (score * 100) / 50
+  let howWas = "ضعيف جدأ";
+  if (percent > 40) howWas = "ضعيف"
+  if (percent > 50) howWas = "مقبول"
+  if (percent > 60) howWas = "جيد"
+  if (percent > 70) howWas = "جيد جدا"
+  if (percent > 80) howWas = "ممتاز"
+    if (percent >= 98) howWas = "فوق الممتاز"
+
+  resultContainer.innerHTML = `<div class="container">
         <div class="box">
             <h1>النتيجة النهائية</h1>
             <h1 class="result">${percent.toFixed(1)}%</h1>
-            <p>لقد حصلت على ${score} نقطة من 15 نقطة حيث يساوي ${percent}%</p>
+            <h1 class="how-was">${howWas}</h1>
+            <p>لقد حصلت على ${score} نقطة من ${(50)} نقطة حيث يساوي ${percent}%</p>
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
+            <div class="writing-result">
+            <h2>
+            إجابتك علي السؤال المقالي
+            </h2>
+            <p>${writingAns}</p>
+            <h2>
+            الإجابة النموذجية علي السؤال المقالي
+            </h2>
+            <p>${writingCorrAns}</p>
+            </div>
+            <p>حيث حصلت على ${writingPoints} من النقاط</P>
             <div class="re">
                 <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
                 <button id="reload-btn">مرة أًخرى</button>
@@ -788,3 +814,4 @@ function getResult() {
     .addEventListener('click', () => location.reload())
   clearInterval(timing)
 }
+postQuestion()

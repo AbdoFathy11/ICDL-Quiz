@@ -250,6 +250,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -361,4 +362,17 @@ textarea {
     box-shadow: 1px 1px 5px 0px #00000073;
     padding: 10px;
     font-size: 1.2rem;
+}
+.writing-result {
+    text-align: center;
+    padding: 10px;
+}
+.how-was {
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: var(--dark-purple);
+    color: white;
+    text-align: center;
+    border: 2px solid #093246;
+    border-radius: 10%;
 }
