@@ -538,7 +538,7 @@ function secondsToTime(seconds) {
 
     return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
 }
-let timer = 180;
+let timer = 30;
 const timerDiv = document.querySelector('.timer')
 
 setInterval(() => {
