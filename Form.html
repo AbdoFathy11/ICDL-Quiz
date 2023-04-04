@@ -33,21 +33,30 @@
     <!-- Start Form -->
     <div class="form">
         <h2>يرجى اكمال البيانات التالية</h2>
-        <div class="cont">
+        <div class="container">
             <form action=" ">
                 <div class="form-item">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="إسم الطالب">
+                    <div>
+                        <label for="name">الإسم</label>
+                        <input type="text" placeholder="إسم الطالب" id="name">
+                    </div>
                 </div>
                 <div class="form-item">
                     <i class="fa-solid fa-users"></i>
-                    <input type="text" placeholder="الفرقة">
+                    <div>
+                        <label for="grade">الفرقة</label>
+                        <input type="text" placeholder="الفرقة" id="grad">
+                    </div>
                 </div>
                 <div class="form-item">
                     <i class="fa-solid fa-building-columns"></i>
-                    <input type="text" placeholder="الشعبة">
+                    <div>
+                        <label for="branch">الشعبة</label>
+                        <input type="text" placeholder="الشعبة" id="branch">
+                    </div>
                 </div>
-                <button type="submit"></button>
+                <button type="submit">تأكيد</button>
             </form>
             <img src="../ICDL-Quiz/img/form-removebg-preview.png" alt="">
         </div>
