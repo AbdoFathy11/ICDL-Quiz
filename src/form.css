@@ -227,7 +227,7 @@ button:hover {
 
 
 .form form {
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -257,6 +257,17 @@ button:hover {
     background-color: var(--main-color);
     border: none;
 }
+
+.form .container .option {
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: auto;
+    background-color: var(--main-color);
+    border: none;
+
+}
+
+.form .container .option option {}
 
 .form .container .form-item input:focus {
     background-color: white;
