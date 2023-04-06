@@ -1209,7 +1209,7 @@ function getResult() {
 }
 postQuestion()
 
-theForm.btn.addEventListener("click", () => {
+theForm.btn.addEventListener("click", (e) => {
   const info = {
     name: theForm.name.value,
     branch: theForm.branch.value,
@@ -1218,6 +1218,6 @@ theForm.btn.addEventListener("click", () => {
   console.log(info)
   console.log(theForm.select.options[theForm.select.selectedIndex].value)
   // localStorage.setItem("info", JSON.stringify(info))
-  localStorage.setItem("quiz", theForm.select.options[theForm.select.selectedIndex].value)
+  // localStorage.setItem("quiz", theForm.select.options[theForm.select.selectedIndex].value)
 
 })

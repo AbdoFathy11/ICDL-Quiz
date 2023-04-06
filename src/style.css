@@ -296,6 +296,7 @@ button:hover {
 
 .form h2 {
     text-align: center;
+    width: 100%;
     font-family: none;
 }
 
@@ -333,7 +334,7 @@ button:hover {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     caret-color: var(--main-color);
-    width: 80%;
+    width: 100%;
 }
 
 .form .container .form-item input::placeholder {
@@ -346,7 +347,7 @@ button:hover {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     caret-color: var(--main-color);
-    width: 80%;
+    width: 100%;
 }
 
 .form p {
@@ -365,9 +366,7 @@ button:hover {
 .form .container .option option {}
 
 .form .container .form-item input:focus {
-    background-color: white;
-    border: 5px solid var(--main-color);
-    padding: 15px;
+    border-color: #006D9F;
 }
 
 .form .container .form-item svg {
