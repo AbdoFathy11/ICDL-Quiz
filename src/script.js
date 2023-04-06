@@ -530,6 +530,391 @@ const questions = [
     },
   },
 ]
+const questions2 = [
+  {
+    arapic: {
+      question: 'أي نوع من المحاسبة الخارجية التالية يوفر معلومات للمستفيدين الخارجين ؟',
+      options: [
+        'المحاسبة المالية',
+        'المحاسبة الحكومية',
+        'محاسبة التكاليف',
+        'جميع الإجابات السابقة خاطئة',
+      ],
+      correctAnswer: 0
+    },
+    english: {
+      question: 'Which type of external accounting provides information to external users?',
+      options: [
+        'Financial Accounting',
+        'Governmental Accounting',
+        'Cost Accounting',
+        'All of the above are incorrect',
+      ],
+      correctAnswer: 0
+    },
+  },
+  {
+    arapic: {
+      question: 'إذا كان إجمالي المشتريات 70000 جنيه والخصم المسموع به 10000 جنيه والخصم المكتسبة 3000 جنيه ومردودات المشتريات 7000 جنيه ومسموحات المبيعات 5000 جنيه فإن صافي المشتريات يكون ؟',
+      options: [
+        '60000 جنيه',
+        '55000 جنيه',
+        '45000 جنيه',
+        'جميع الإجابات السابقة خاطئة',
+      ],
+      correctAnswer: 2
+    },
+    english: {
+      question: 'If total purchases are 70,000 EGP, discounts taken are 10,000 EGP, discounts earned are 3,000 EGP, purchase returns are 7,000 EGP, and sales allowances are 5,000 EGP, what is the net purchases amount?',
+      options: [
+        '60,000 EGP',
+        '55,000 EGP',
+        '45,000 EGP',
+        'All of the above are incorrect',
+      ],
+      correctAnswer: 2
+    },
+  },
+  {
+    arapic: {
+      question:
+        'في 30/12 ظهرت الأرصدة التاليى في ميزان المراجعة قبل التسويات لمؤسسة الأنوار :-\nمدينون 81000 جنيه - مخصص ديون مشكوك في تحصيلها 9000 جنيه وعند الجرد تبين أن هناك ديوناً معدومة قيمتها 1000 حنيه كما تقرر تكوين مخصص للديون المشكوك في تحصيلها بنسبة 6% من رصيد المدينين بناء على ما تقدم فإن حساب المدينين مطروحاً منه مخصص الديون المشكوك في تحصيلها (الديون الجديدة) الذي يظهر في قائمة المركز المالي ',
+      options: [
+        '81000 جنيه',
+        '75200 جنيه',
+        '71000 جنيه',
+        '80000 جنيه',
+      ],
+      correctAnswer: 1,
+    },
+    english: {
+      question:
+        'On 30/12, the following balances appeared in the audit balance before adjustments for Al-Anwar Institution: Debit 81,000 pounds - Deduct doubtful debts of 9,000 pounds. During the inventory, it was found that there were bad debts worth 1,000 pounds. It was also decided to form a reserve for doubtful debts by 6% of the debit balance based on what has been presented. If the debt reserve for doubtful debts (new debts) that appears in the financial center list is deducted from it, then what is the amount of the debtors account?',
+      options: [
+        '81000 pounds',
+        '75200 pounds',
+        '71000 pounds',
+        '80000 pounds',
+      ],
+      correctAnswer: 1,
+    },
+  },
+  { arapic: {
+    question: 'تعد الكميالات المسحوبة على المؤسسة ؟',
+    options: [
+      'أوراق قبض',
+      'سندات أذنية',
+      'أوراق دفع',
+      'أوراق مالية',
+    ],
+    correctAnswer: 2
+  },
+  english: {
+    question: 'What are the payments drawn on the enterprise called?',
+    options: [
+      'Receipt papers',
+      'Debentures',
+      'Payment papers',
+      'Securities',
+    ],
+    correctAnswer: 2
+  },
+},
+{
+  arapic: {
+    question: 'بلغ ايراد الخدمات العلاجية المحصل فعليا خلال العام في مستوصف 400000 جنيه فإذا علمت ان قيمة بعض الخدمات العلاجية التي قدمت للمرضى ولم تسجل في الدفاتر ولم تحصل قيمتها بعد حتى نهاية العام بلغت 30000 جنيه إذن مبلغ إيرادات الخدمات العلاجية الذي يظهر في قائمة الدخل هو ؟',
+    options: [
+      '430000 جنيه',
+      '370000 جنيه',
+      '400000 جنيه',
+      'جميع الإجابات السابقة خاطئة',
+    ],
+    correctAnswer: 2
+  },
+  english: {
+    question: 'The actual revenue from medical services collected during the year at the clinic was 400,000 pounds. If the value of some medical services provided to patients and not recorded in the books and their value has not been collected yet until the end of the year was 30,000 pounds, then the amount of revenue from medical services that appears in the income statement is?',
+    options: [
+      '430,000 pounds',
+      '370,000 pounds',
+      '400,000 pounds',
+      'All of the above answers are incorrect',
+    ],
+    correctAnswer: 2
+  },
+},
+{
+arapic: {
+  question: 'إذا كان رصيد كل من البنك 50000 جنيه وأوراق الدفع 8000 جنيه وأوراق القبض 5000 جنيه والأثاث 20000 جنيه والمباني 100000 جنيه وبضاعة أخر المدة 15000 جنيه والسيارات 80000 جنيه فإن إجمالي الأصول المتداولة يكون ',
+  options: [
+    '70000 جنيه',
+    '55000 جنيه',
+    '200000 جنيه',
+    'جميع الإجابات السابقة خاطئة',
+  ],
+  correctAnswer: 1
+},
+english: {
+  question: 'If each bank account has a balance of 50,000 EGP, payment papers of 8,000 EGP, receipt papers of 5,000 EGP, furniture of 20,000 EGP, buildings of 100,000 EGP, last period goods of 15,000 EGP, and cars of 80,000 EGP, what is the total current assets?',
+  options: [
+    '70,000 EGP',
+    '55,000 EGP',
+    '200,000 EGP',
+    'All of the above answers are incorrect',
+  ],
+  correctAnswer: 1
+},
+},
+{
+arapic: {
+  question: 'أي من البنود التالية يظهر في كل من قائمة الدخل وقائمة المركز المالي؟',
+  options: [
+    'العقارات',
+    'المدينون',
+    'رأس المال',
+    'صافي الدخل أو صافي الخسارة',
+  ],
+  correctAnswer: 3
+},
+english: {
+  question: 'Which one of the following items appears in both the income statement and the balance sheet?',
+  options: [
+    'Properties',
+    'Creditors',
+    'Capital',
+    'Net Income or Net Loss',
+  ],
+  correctAnswer: 3
+},
+},
+{
+  arapic: {
+    question: 'تعيين احد العامليين الجدد في المؤسسة يؤدي إلى؟',
+    options: [
+      'نقص في الأصول ونقص في حقوق الملكية',
+      'زيادة في الخصوم ونقص في حقوق الملكية',
+      'نقص في الاصول ونقص في الخصوم',
+      'لا يؤثر مطلقا في المعادلة المحاسبية',
+    ],
+    correctAnswer: 3
+  },
+  english: {
+    question: 'Hiring a new employee in the organization leads to ?',
+    options: [
+      'Decrease in assets and decrease in equity',
+      'Increase in liabilities and decrease in equity',
+      'Decrease in assets and decrease in liabilities',
+      'No effect at all on the accounting equation',
+    ],
+    correctAnswer: 3
+  }
+},
+{
+  arapic: {
+    question: 'من الخصائص النوعية للمعلومات المحاسبية؟',
+    options: [
+      'الملائمة',
+      'الموثوقية ',
+      'القابلية للمقارنة',
+      'جميع الإجابات السابقة خاطئة',
+    ],
+    correctAnswer: 3
+  },
+  english: {
+    question: 'Which one of the following is a qualitative characteristic of accounting information?',
+    options: [
+      'Relevance',
+      'Reliability',
+      'Comparability',
+      'All of the above are incorrect',
+    ],
+    correctAnswer: 3
+  }
+},
+{
+  arapic: {
+    question: 'إذا كان إجمالي المبيعات 410000 جنيه ومردودات المبيعات 10000 جنيه وتكلفة البضاعة المباعة 300000 جنيه ومصروفات التشغيل 60000 جنيه فإن مجمل الربح يكون ؟',
+    options: [
+      '400000 جنيه',
+      '100000 جنيه',
+      '340000 جنيه',
+      'جميع الإجابات السابقة خاطئة',
+    ],
+    correctAnswer: 2
+  },
+  english: {
+    question: 'If total sales are 410,000 EGP, sales returns are 10,000 EGP, cost of goods sold is 300,000 EGP, and operating expenses are 60,000 EGP, what is the total profit ?',
+    options: [
+      '400,000 EGP',
+      '100,000 EGP',
+      '340,000 EGP',
+      'All of the above answers are incorrect',
+    ],
+    correctAnswer: 2
+  },
+},
+{
+  arapic: {
+    question: 'تستخدم المحاسبة في حالة المنشأت التي تهدف إلى تحقيق الربح ؟',
+    options: [
+      'صح',
+      'خطأ',
+    ],
+    correctAnswer: 0
+  },
+  english: {
+    question: 'Accounting is used in entities that aim to achieve profit ?',
+    options: [
+      'True',
+      'False',
+    ],
+    correctAnswer: 0
+  },
+},
+{
+  arapic: {
+    question: 'تتميز الأنشطة التجارية بإنها تحدث إضافة لما تقوم بحيازته من خامات او مواد اولية او سلع نصف مصنعة ؟',
+    options: [
+      'صح',
+      'خطأ',
+    ],
+    correctAnswer: 0
+  },
+  english: {
+    question: 'Commercial activities are characterized by happening in addition to what they possess of raw materials, raw goods, or semi-manufactured goods ?',
+    options: [
+      'True',
+      'False',
+    ],
+    correctAnswer: 0
+  },
+},
+{
+  arabic: {
+    question: 'تختلف الأشكال القانونية لمزاولة الأنشطة بإختلاف القوانين المعمول بها في الدولة',
+    options: [
+      'صح',
+      'خطأ'
+    ],
+    correctAnswer: 0
+  },
+  english: {
+    question: 'Legal forms of conducting activities differ depending on the laws applicable in the country.',
+    options: [
+      'True',
+      'False'
+    ],
+    correctAnswer: 0
+  }
+},
+{
+  arabic: {
+    question: 'يستخدم أصلاح المنشأة الفردية لوصف الشركة التي يشترك في إدارتها أكثر من شريك',
+    options: [
+      'صح',
+      'خطأ'
+    ],
+    correctAnswer: 0
+  },
+  english: {
+    question: 'The term "sole proprietorship" is used to describe a company that is managed by more than one partner.',
+    options: [
+      'True',
+      'False'
+    ],
+    correctAnswer: 1
+  }
+},
+{
+  arabic: {
+    question: 'لا يوجد إختلاف بين شركات الأشخاص وشركات الأموال',
+    options: [
+      'صح',
+      'خطأ'
+    ],
+    correctAnswer: 1
+  },
+  english: {
+    question: 'There is no difference between personal companies and capital companies.',
+    options: [
+      'True',
+      'False'
+    ],
+    correctAnswer: 1
+  }
+},
+{
+  arabic: {
+    question: 'تعتبر المنشأة وحدة محاسبية مستقلة عن ملاكها سواء أكانت منشأة فردية أو شركة أشخاص أو شركة أموال',
+    options: [
+      'صح',
+      'خطأ'
+    ],
+    correctAnswer: 1
+  },
+  english: {
+    question: 'The entity is an independent accounting unit from its owners, whether it is an individual entity, a personal company or a capital company.',
+    options: [
+      'True',
+      'False'
+    ],
+    correctAnswer: 0
+  }
+},
+  {
+    arapic: {
+      question: 'يقتصر الهدف من المحاسبة المالية على تحديد المراكز المالية لمنشأت الأعمال في أي وقت يطلب فيه؟',
+      options: [
+        'صح',
+        'خطأ'
+      ],
+      correctAnswer: 0
+    },
+    english: {
+      question: 'Does the objective of financial accounting only limit to identifying the financial centers of business entities at any time upon request?',
+      options: [
+        'True',
+        'False'
+      ],
+      correctAnswer: 0
+    },
+  },
+  {
+    arapic: {
+      question: 'تقوم المحاسبة بعدة وظائف لتحقيق أهدافها؟',
+      options: [
+        'صح',
+        'خطأ'
+      ],
+      correctAnswer: 0
+    },
+    english: {
+      question: 'Does accounting serve multiple functions to achieve its objectives?',
+      options: [
+        'True',
+        'False'
+      ],
+      correctAnswer: 0
+    },
+  },
+  {
+    arapic: {
+      question: 'تسعى كل من محاسبة التكاليف والمحاسبة الإدارية إلى تحقيق هدف واحد؟',
+      options: [
+        'صح',
+        'خطأ'
+      ],
+      correctAnswer: 1
+    },
+    english: {
+      question: 'Does both cost accounting and managerial accounting aim to achieve one goal?',
+      options: [
+        'True',
+        'False'
+      ],
+      correctAnswer: 1
+    },
+  }
+]
 const writing = {
     arapic: {
     question: 'ما هو تعريف الحاسوب ومكوناته؟',
@@ -815,3 +1200,4 @@ function getResult() {
   clearInterval(timing)
 }
 postQuestion()
+
