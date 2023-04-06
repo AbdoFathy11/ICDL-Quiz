@@ -31,7 +31,7 @@
     <!-- End Header -->
 
     <!-- Start Form -->
-    <div class="form">
+    <div class="form" id="form">
         <h2>يرجى اكمال البيانات التالية</h2>
         <div class="container">
             <form action=" ">
@@ -53,12 +53,15 @@
                         <input type="text" placeholder="الشعبة" id="branch">
                     </div>
                 </div>
-                <select class="option" id="select">
-                    <option selected disabled>اختر المادة</option>
-                    <option value="0">ICDL</option>
-                    <option value="1">المحاسبة المالية</option>
-                </select>
-                <button type="submit">تأكيد</button>
+                <div class="form-item">
+                    <i class="fa-solid fa-ballot-check"></i>
+                    <select class="option" id="select">
+                        <option selected disabled>اختر المادة</option>
+                        <option value="0">ICDL</option>
+                        <option value="1">المحاسبة المالية</option>
+                    </select>
+                </div>
+                <button id="formBtn">تأكيد</button>
             </form>
         </div>
     </div>
