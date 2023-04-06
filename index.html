@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@1000&display=swap" rel="stylesheet">
-    <script defer src="./src/script.js"></script>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
                         <div class="form">
                             <h2>التعليم عبر الانترنت</h2>
                             <div class="container">
-                                <form action=" ">
+                                <form id="form">
                                     <div class="form-item">
                                         <i class="fa-solid fa-user"></i>
                                         <div>
@@ -59,14 +58,14 @@
                                         </div>
                                     </div>
                                     <div class="form-item">
-                                        <i class="fa-solid fa-square-check"></i>
+                                        <i class="fa-solid fa-ballot-check"></i>
                                         <select class="option" id="select">
                                             <option selected disabled>اختر المادة</option>
                                             <option value="0">ICDL</option>
                                             <option value="1">المحاسبة المالية</option>
                                         </select>
                                     </div>
-                                    <button id="formBtn">تأكيد</button>
+                                    <button type="submit" id="formBtn">إبدأ الإختبار</button>
                                 </form>
                             </div>
                         </div>
@@ -76,9 +75,10 @@
             </div>
         </div>
         <!-- End Landing  -->
-        <!-- <div class="shape">
-        </div> -->
+        <div class="shape">
+        </div>
     </div>
+    <script src="./src/script.js"></script>
     <script src="../ICDL-Quiz/src/all.min.js"></script>
 </body>
 

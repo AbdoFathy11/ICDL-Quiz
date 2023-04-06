@@ -923,6 +923,7 @@ const theForm = {
   select: document.getElementById("select"),
   btn: document.getElementById("formBtn"),
 }
+let test = localStorage.getItem('quiz')
 const writing = {
     arapic: {
     question: 'ما هو تعريف الحاسوب ومكوناته؟',
@@ -935,6 +936,22 @@ const writing = {
     'It is a collection of integrated devices that input, process, output, and store data and information. Computer systems are currently built around at least one digital processing device. There are five main hardware components in a computer system: input devices, processing devices, storage devices, output devices, and communication devices.',
     },
     };
+
+
+    if (theForm.btn) {theForm.btn.addEventListener("click", (e) => {
+      e.preventDefault()
+      const info = {
+        name: theForm.name.value,
+        branch: theForm.branch.value,
+        grad: theForm.grad.value,
+      }
+      localStorage.setItem("info", JSON.stringify(info))
+      localStorage.setItem("quiz", `${theForm.select.options[theForm.select.selectedIndex].value}`)
+      location.replace("./exam.html")
+    })}
+    if (test == 0) {
+      nextBtn.setAttribute("data-id", "writing")
+    }
     console.log(questions.length);
 
     function levenshteinDistance(a, b) {
@@ -984,7 +1001,7 @@ let language = 'arapic'
 
 function postQuestion(question) {
 
-  if (!question) {
+  if (!question && test == 0) {
     if (nextBtn.getAttribute("data-id") === "writing") {
         questionContainer.innerHTML = `
         <div class="question">${writing[language]["question"]}</div>
@@ -997,6 +1014,7 @@ function postQuestion(question) {
     return
   }
   if (question[1] >= 0) {
+
     const thequestion = question[0][language]
     const ans = question[1]
     const optionsHTML = thequestion.options
@@ -1041,8 +1059,13 @@ function postQuestion(question) {
 }
 function generateQuestion() {
   const index = Math.floor(Math.random() * questions.length)
-  randomQuestion = questions[index]
-  questions.splice(index, 1)
+  if (test == 0) {
+    randomQuestion = questions[index]
+    questions.splice(index, 1)
+  } else {
+    randomQuestion = questions2[index]
+    questions2.splice(index, 1)
+  }
 }
 nextBtn.addEventListener('click', (e) => {
     if (e.target.getAttribute("data-id") === "writing") {
@@ -1133,8 +1156,7 @@ prevBtn.addEventListener('click', () => {
     alert('هذا أول الامتحان')
   }
 })
-// generateQuestion()
-// postQuestion(randomQuestion)
+
 
 function secondsToTime(seconds) {
   const hours = Math.floor(seconds / 3600)
@@ -1207,17 +1229,12 @@ function getResult() {
     .addEventListener('click', () => location.reload())
   clearInterval(timing)
 }
-postQuestion()
+if (test == 0) {
+  postQuestion()
+} else {
+  generateQuestion()
+  postQuestion(randomQuestion)
+}
 
-theForm.btn.addEventListener("click", (e) => {
-  const info = {
-    name: theForm.name.value,
-    branch: theForm.branch.value,
-    grad: theForm.grad.value,
-  }
-  console.log(info)
-  console.log(theForm.select.options[theForm.select.selectedIndex].value)
-  // localStorage.setItem("info", JSON.stringify(info))
-  // localStorage.setItem("quiz", theForm.select.options[theForm.select.selectedIndex].value)
 
-})
+console.log(theForm.btn)
