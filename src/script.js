@@ -915,6 +915,14 @@ english: {
     },
   }
 ]
+const theForm = {
+  main: document.getElementById("form"),
+  name: document.getElementById("name"),
+  grad: document.getElementById("grad"),
+  branch: document.getElementById("branch"),
+  select: document.getElementById("select"),
+  btn: document.getElementById("formBtn"),
+}
 const writing = {
     arapic: {
     question: 'ما هو تعريف الحاسوب ومكوناته؟',
@@ -1200,3 +1208,16 @@ function getResult() {
   clearInterval(timing)
 }
 postQuestion()
+
+theForm.btn.addEventListener("click", () => {
+  const info = {
+    name: theForm.name.value,
+    branch: theForm.branch.value,
+    grad: theForm.grad.value,
+  }
+  console.log(info)
+  console.log(theForm.select.options[theForm.select.selectedIndex].value)
+  // localStorage.setItem("info", JSON.stringify(info))
+  localStorage.setItem("quiz", theForm.select.options[theForm.select.selectedIndex].value)
+
+})
