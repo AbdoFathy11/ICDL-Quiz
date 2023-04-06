@@ -1214,9 +1214,10 @@ theForm.btn.addEventListener("click", () => {
     name: theForm.name.value,
     branch: theForm.branch.value,
     grad: theForm.grad.value,
-    subject: theForm.select.option.value
   }
   console.log(info)
+  console.log(theForm.select.options[theForm.select.selectedIndex].value)
   // localStorage.setItem("info", JSON.stringify(info))
+  localStorage.setItem("quiz", theForm.select.options[theForm.select.selectedIndex].value)
 
 })
