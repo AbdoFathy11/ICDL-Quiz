@@ -1200,4 +1200,3 @@ function getResult() {
   clearInterval(timing)
 }
 postQuestion()
-

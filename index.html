@@ -9,6 +9,7 @@
     <link rel="icon" type="image /x-icon"
         href="../ICDL-Quiz/img/WhatsApp_Image_2023-03-14_at_3.54.49_PM-removebg-preview (2).ico">
     <link rel="stylesheet" href="../ICDL-Quiz/src/style.css">
+    <link rel="stylesheet" href="../ICDL-Quiz/src/form.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../ICDL-Quiz/src/all.min.css">
     <!-- Cairo font from google font -->
@@ -36,10 +37,41 @@
             <div class="container">
                 <div class="overlay">
                     <div class="btn">
-                        <h2>التعليم عبر الانترنت</h2>
-                        <p>اختبار ICDL فى المعهد العالى للعلوم التجارية والحاسب الالى بالاسماعيلية : مفتاح للكفاءة
-                            الرقمية</p>
-                        <button><a href="exam.html">إبدأ الاختبار </a></button>
+
+                            <div class="form">
+                                <h2>التعليم عبر الانترنت</h2>
+                                <p>اختبار ICDL فى المعهد العالى للعلوم التجارية والحاسب الالى بالاسماعيلية : مفتاح للكفاءة
+                                    الرقمية</p>
+                                <h2>يرجى اكمال البيانات التالية</h2>
+                                <div class="container">
+                                    <form action=" ">
+                                        <div class="form-item">
+                                            <i class="fa-solid fa-user"></i>
+                                            <div>
+                                                <input type="text" placeholder="إسم الطالب" id="name">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <i class="fa-solid fa-users"></i>
+                                            <div>
+                                                <input type="text" placeholder="الفرقة" id="grad">
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <i class="fa-solid fa-building-columns"></i>
+                                            <div>
+                                                <input type="text" placeholder="الشعبة" id="branch">
+                                            </div>
+                                        </div>
+                                        <select class="option" id="select">
+                                            <option selected disabled>اختر المادة</option>
+                                            <option value="0">ICDL</option>
+                                            <option value="1">المحاسبة المالية</option>
+                                        </select>
+                                        <button type="submit">تأكيد</button>
+                                    </form>
+                                </div>
+                            </div>
                     </div>
                     <img src="../ICDL-Quiz/img/LANDING2.png" alt="">
                 </div>
