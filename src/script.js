@@ -949,9 +949,6 @@ const writing = {
       localStorage.setItem("quiz", `${theForm.select.options[theForm.select.selectedIndex].value}`)
       location.replace("./exam.html")
     })}
-
-    console.log(questions.length);
-
     function levenshteinDistance(a, b) {
         if (a.length === 0) return b.length;
         if (b.length === 0) return a.length;
@@ -1031,8 +1028,6 @@ function postQuestion(question) {
     `
   } else {
     const thequestion = question["arabic"]
-    console.log(thequestion);
-    console.log(question);
     const optionsHTML = thequestion.options
       .map((option, index) => {
         return `<div class="option" data-id="${index}">${option}</div>`
@@ -1068,8 +1063,6 @@ function generateQuestion() {
     randomQuestion = questions2[index]
     questions2.splice(index, 1)
   }
-  console.log(questions[index])
-  console.log(index)
 }
 nextBtn.addEventListener('click', (e) => {
     if (e.target.getAttribute("data-id") === "writing") {
@@ -1239,16 +1232,13 @@ function getResult() {
   clearInterval(timing)
 }
 if (test == 0) {
-  console.log("test 0000000000000000000000000000")
   postQuestion()
 } else {
   generateQuestion()
-  console.log("test 11111111111111111111111111")
   postQuestion(randomQuestion)
 }
 
 
-console.log(theForm.btn)
 if (test == 0) {
   nextBtn.setAttribute("data-id", "writing")
 }
