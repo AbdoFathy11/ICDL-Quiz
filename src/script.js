@@ -1,6 +1,6 @@
 const questions = [
   {
-    arapic: {
+    arabic: {
       question: 'أي من الاتي يًعد سوفت وير ؟',
       options: [
         'برامج الكمبيوتر',
@@ -22,7 +22,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الاتي يصف شبكة لاسلكية تحتاج إلى كلمة مرور للوصول لها ؟',
       options: ['شبكة مغلقة', 'شبكة محمية', 'شبكة معطلة', 'شبكة مفتوحة'],
       correctAnswer: 1,
@@ -40,7 +40,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي مما يلي هو أفضل وصف يوضح الغرض الأساسي من شبكات الحاسوب ؟',
       options: [
         'لتشغيل الموسيقى',
@@ -63,7 +63,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'أي من العبارات الاتية يعد صحيحاً عن الشبكة العنكبوتية (الإنترنت) ؟',
       options: [
@@ -86,7 +86,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من المهام الاتية يمكن ان يًنفذ بإستخدام التطبيقات الاتية ؟',
       options: [
         'تقديم الدعم الفني للشبكات',
@@ -109,7 +109,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الطرق الاتية تساعد على تحسين أداء الحاسوب ؟',
       options: [
         'إضافة برامج جديدة',
@@ -132,7 +132,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'أي من اسماء الملفات التالية هي تسمية جيدة لملف يحتوي على سجلات مبيعات لشهر يناير ؟',
       options: [
@@ -156,7 +156,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الاتي يعطي الحق للمستخدم لاستخدام البرامج التطبيقية ؟',
       options: ['تصريح', 'ترخيص', 'حقوق الطبع والنشر', 'توكيل'],
       correctAnswer: 1,
@@ -169,7 +169,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'أي من خيارات الطباعة الاتية نختار عندما نريد طباعة صفحة معروضة أمامك داخل أحد المستندات ؟',
       options: [
@@ -193,7 +193,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الأقراص الصلبة يًعد أكبر سعة تخزينية ؟',
       options: [
         'قرص بسعة 100 ميجابايت',
@@ -216,7 +216,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الاتي يصف معدل النقل (ما المقصود بمعدل النقل) ؟',
       options: [
         'سرعة المعالج داخل الحاسوب',
@@ -238,7 +238,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'اي من الاتي يصف حفظ الملفات من جهازك إلى خادم عبر الإنترنت ؟',
       options: [
         'التخزين على شبكة الأنترنت',
@@ -261,7 +261,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أي من الاتي يعد كلمة مرور جيدة ؟',
       options: ['1*Ru55el OR *1goh@rry', 'Williamjohn', '12345', 'Wj1980'],
       correctAnswer: 0,
@@ -273,7 +273,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'أي من الاتي تعد أفضل لحماية الكمبيوتر من الإصابة بالبرامج الضارة ؟',
       options: [
@@ -297,7 +297,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'أي من الاتي يؤدي إلى حفظ الطاقة (تعمل على ترشيد إستهلاك الطاقة) ؟',
       options: [
@@ -320,7 +320,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'لتحديد ملفين او أكثر من الملفات المتجاورة داخل مجلد ما',
       options: ['ESC', 'ALT', 'TAB', 'Shift'],
       correctAnswer: 2,
@@ -337,7 +337,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'إذا أردت محاذاة للفقرة المحددة یسار تستخدم مفتاحى  Ctrl + x',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
@@ -350,7 +350,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'أحدث إصدار نظام تشغیل من الإصدارات الآتیة هو  Windows 8.1',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
@@ -363,7 +363,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'كل ما یلى یعتبر من منافذ الكمبیوتر (Ports ) عدا  UPS',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -376,7 +376,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'لكى یحق استخدام أحد تطبیقات برامج الكمبیوتر لابد من توفر رخصة',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -389,7 +389,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'وظیفة الباور سبلاى هى توصیل من خمسة إلى ١٢ فولت لكل أجزاء الكمبیوتر كل مكان حسب حاجته',
       options: ['صح', 'خطأ'],
@@ -403,7 +403,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'یتعرف نظام التشغیل على نوعیة الملفات من Extension',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -415,7 +415,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'عند حذف ملف من الوسیط التخزینى فإنه یرسل إلى سلة المحذوفات فى حالة وجوده فى USP drive',
       options: ['صح', 'خطأ'],
@@ -429,7 +429,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         ' یحتفظ الكمبیوتر بالمعلومات والبرامج التى تستخدم فى بدء التشغیل من خلال ذاكرة Hard disk',
       options: ['صح', 'خطأ'],
@@ -443,7 +443,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'یمكن استدعاء المساعدة فى نظام التشغیل عن طریق F9',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
@@ -455,7 +455,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'یمكن أخذ صورة من الشاشة عن طریق Print screen',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -467,7 +467,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'لنقل رمز موجود على سطح المكتب باستخدام إجراء الفأرة Drag and Drop',
       options: ['صح', 'خطأ'],
@@ -481,7 +481,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'للتحكم فى عرض المجلدات المخفیة نستخدم Folder option',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -494,7 +494,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'البیانات المخزنة باسم على القرص تسمى Drivers',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
@@ -506,7 +506,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'بایت واحد یعادل لحفظ ملف نستخدم Save فقط',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
@@ -518,7 +518,7 @@ const questions = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'الملف الذى یتم تغییر شكله Folder',
       options: ['صح', 'خطأ'],
       correctAnswer: 0,
@@ -532,7 +532,7 @@ const questions = [
 ]
 const questions2 = [
   {
-    arapic: {
+    arabic: {
       question: 'أي نوع من المحاسبة الخارجية التالية يوفر معلومات للمستفيدين الخارجين ؟',
       options: [
         'المحاسبة المالية',
@@ -554,7 +554,7 @@ const questions2 = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'إذا كان إجمالي المشتريات 70000 جنيه والخصم المسموع به 10000 جنيه والخصم المكتسبة 3000 جنيه ومردودات المشتريات 7000 جنيه ومسموحات المبيعات 5000 جنيه فإن صافي المشتريات يكون ؟',
       options: [
         '60000 جنيه',
@@ -576,7 +576,7 @@ const questions2 = [
     },
   },
   {
-    arapic: {
+    arabic: {
       question:
         'في 30/12 ظهرت الأرصدة التاليى في ميزان المراجعة قبل التسويات لمؤسسة الأنوار :-\nمدينون 81000 جنيه - مخصص ديون مشكوك في تحصيلها 9000 جنيه وعند الجرد تبين أن هناك ديوناً معدومة قيمتها 1000 حنيه كما تقرر تكوين مخصص للديون المشكوك في تحصيلها بنسبة 6% من رصيد المدينين بناء على ما تقدم فإن حساب المدينين مطروحاً منه مخصص الديون المشكوك في تحصيلها (الديون الجديدة) الذي يظهر في قائمة المركز المالي ',
       options: [
@@ -599,7 +599,7 @@ const questions2 = [
       correctAnswer: 1,
     },
   },
-  { arapic: {
+  { arabic: {
     question: 'تعد الكميالات المسحوبة على المؤسسة ؟',
     options: [
       'أوراق قبض',
@@ -621,7 +621,7 @@ const questions2 = [
   },
 },
 {
-  arapic: {
+  arabic: {
     question: 'بلغ ايراد الخدمات العلاجية المحصل فعليا خلال العام في مستوصف 400000 جنيه فإذا علمت ان قيمة بعض الخدمات العلاجية التي قدمت للمرضى ولم تسجل في الدفاتر ولم تحصل قيمتها بعد حتى نهاية العام بلغت 30000 جنيه إذن مبلغ إيرادات الخدمات العلاجية الذي يظهر في قائمة الدخل هو ؟',
     options: [
       '430000 جنيه',
@@ -643,7 +643,7 @@ const questions2 = [
   },
 },
 {
-arapic: {
+arabic: {
   question: 'إذا كان رصيد كل من البنك 50000 جنيه وأوراق الدفع 8000 جنيه وأوراق القبض 5000 جنيه والأثاث 20000 جنيه والمباني 100000 جنيه وبضاعة أخر المدة 15000 جنيه والسيارات 80000 جنيه فإن إجمالي الأصول المتداولة يكون ',
   options: [
     '70000 جنيه',
@@ -665,7 +665,7 @@ english: {
 },
 },
 {
-arapic: {
+arabic: {
   question: 'أي من البنود التالية يظهر في كل من قائمة الدخل وقائمة المركز المالي؟',
   options: [
     'العقارات',
@@ -687,7 +687,7 @@ english: {
 },
 },
 {
-  arapic: {
+  arabic: {
     question: 'تعيين احد العامليين الجدد في المؤسسة يؤدي إلى؟',
     options: [
       'نقص في الأصول ونقص في حقوق الملكية',
@@ -709,7 +709,7 @@ english: {
   }
 },
 {
-  arapic: {
+  arabic: {
     question: 'من الخصائص النوعية للمعلومات المحاسبية؟',
     options: [
       'الملائمة',
@@ -731,7 +731,7 @@ english: {
   }
 },
 {
-  arapic: {
+  arabic: {
     question: 'إذا كان إجمالي المبيعات 410000 جنيه ومردودات المبيعات 10000 جنيه وتكلفة البضاعة المباعة 300000 جنيه ومصروفات التشغيل 60000 جنيه فإن مجمل الربح يكون ؟',
     options: [
       '400000 جنيه',
@@ -753,7 +753,7 @@ english: {
   },
 },
 {
-  arapic: {
+  arabic: {
     question: 'تستخدم المحاسبة في حالة المنشأت التي تهدف إلى تحقيق الربح ؟',
     options: [
       'صح',
@@ -771,7 +771,7 @@ english: {
   },
 },
 {
-  arapic: {
+  arabic: {
     question: 'تتميز الأنشطة التجارية بإنها تحدث إضافة لما تقوم بحيازته من خامات او مواد اولية او سلع نصف مصنعة ؟',
     options: [
       'صح',
@@ -861,7 +861,7 @@ english: {
   }
 },
   {
-    arapic: {
+    arabic: {
       question: 'يقتصر الهدف من المحاسبة المالية على تحديد المراكز المالية لمنشأت الأعمال في أي وقت يطلب فيه؟',
       options: [
         'صح',
@@ -879,7 +879,7 @@ english: {
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'تقوم المحاسبة بعدة وظائف لتحقيق أهدافها؟',
       options: [
         'صح',
@@ -897,7 +897,7 @@ english: {
     },
   },
   {
-    arapic: {
+    arabic: {
       question: 'تسعى كل من محاسبة التكاليف والمحاسبة الإدارية إلى تحقيق هدف واحد؟',
       options: [
         'صح',
@@ -925,7 +925,7 @@ const theForm = {
 }
 let test = localStorage.getItem('quiz')
 const writing = {
-    arapic: {
+    arabic: {
     question: 'ما هو تعريف الحاسوب ومكوناته؟',
     answer:
     'هو مجموعة من الأجهزة المتكاملة التي تقوم بإدخال البيانات والمعلومات وإخراجها ومعالجتها وتخزينها. أنظمة الكمبيوتر مبنية حاليًا حول جهاز معالجة رقمي واحد على الأقل. هناك خمسة مكونات رئيسية للأجهزة في نظام الكمبيوتر: أجهزة الإدخال والمعالجة والتخزين والإخراج والاتصالات',
@@ -949,9 +949,7 @@ const writing = {
       localStorage.setItem("quiz", `${theForm.select.options[theForm.select.selectedIndex].value}`)
       location.replace("./exam.html")
     })}
-    if (test == 0) {
-      nextBtn.setAttribute("data-id", "writing")
-    }
+
     console.log(questions.length);
 
     function levenshteinDistance(a, b) {
@@ -997,7 +995,7 @@ let prevLenght
 let score = 0
 let answer = null
 let randomQuestion
-let language = 'arapic'
+let language = 'arabic'
 
 function postQuestion(question) {
 
@@ -1009,12 +1007,11 @@ function postQuestion(question) {
             <textarea id="writing-in" cols="30" rows="4" placeholder="${(language == "english")?"write your answer here !": "أكتب إجابتك هنا!"}"></textarea>
         </div>
         `
-    document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
+    document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length >= 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
     } 
     return
   }
-  if (question[1] >= 0) {
-
+  if (Array.isArray(question)) {
     const thequestion = question[0][language]
     const ans = question[1]
     const optionsHTML = thequestion.options
@@ -1033,7 +1030,9 @@ function postQuestion(question) {
         <div class="options">${optionsHTML}</div>
     `
   } else {
-    const thequestion = question[language]
+    const thequestion = question["arabic"]
+    console.log(thequestion);
+    console.log(question);
     const optionsHTML = thequestion.options
       .map((option, index) => {
         return `<div class="option" data-id="${index}">${option}</div>`
@@ -1058,14 +1057,19 @@ function postQuestion(question) {
   return question
 }
 function generateQuestion() {
-  const index = Math.floor(Math.random() * questions.length)
+  let index
+  if (test == 0 )  index = Math.floor(Math.random() * questions.length)
+  if (test == 1 )  index = Math.floor(Math.random() * questions2.length)
+  
   if (test == 0) {
     randomQuestion = questions[index]
     questions.splice(index, 1)
-  } else {
+  } else if (test == 1) {
     randomQuestion = questions2[index]
     questions2.splice(index, 1)
   }
+  console.log(questions[index])
+  console.log(index)
 }
 nextBtn.addEventListener('click', (e) => {
     if (e.target.getAttribute("data-id") === "writing") {
@@ -1083,8 +1087,11 @@ nextBtn.addEventListener('click', (e) => {
     } else {
         
   if (answer === randomQuestion[language].correctAnswer) score++
-  if (questions.length === 0) {
+  if ((test == 0 && questions.length <= 0) || (test == 1 && questions2.length <= 0)) {
     getResult()
+  }
+  if ((test == 0 && questions.length <= 1) || (test == 1 && questions2.length <= 1)) {
+    e.target.innerHTML = "إنهاء"
   }
   if (prevLenght < previuos.length) {
     postQuestion(previuos[prevLenght])
@@ -1129,18 +1136,18 @@ nextBtn.addEventListener('click', (e) => {
     }
 })
 document.getElementById('language').addEventListener('click', (e) => {
-  if (language === 'arapic') {
-    e.target.innerHTML = 'English'
+  if (language === 'arabic') {
+    e.target.innerHTML = 'العربية'
     prevBtn.innerHTML = 'Previous'
     nextBtn.innerHTML = 'Next'
     language = 'english'
     postQuestion(randomQuestion)
     questionContainer.style.direction = 'ltr'
   } else {
-    e.target.innerHTML = 'العربية'
+    e.target.innerHTML = 'English'
     nextBtn.innerHTML = 'التالي'
     prevBtn.innerHTML = 'السابق'
-    language = 'arapic'
+    language = 'arabic'
     questionContainer.style.direction = 'rtl'
     postQuestion(randomQuestion)
   }
@@ -1230,11 +1237,17 @@ function getResult() {
   clearInterval(timing)
 }
 if (test == 0) {
+  console.log("test 0000000000000000000000000000")
   postQuestion()
 } else {
   generateQuestion()
+  console.log("test 11111111111111111111111111")
   postQuestion(randomQuestion)
 }
 
 
 console.log(theForm.btn)
+if (test == 0) {
+  nextBtn.setAttribute("data-id", "writing")
+}
+document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
