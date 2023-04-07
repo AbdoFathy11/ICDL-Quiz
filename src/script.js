@@ -1197,7 +1197,8 @@ function getResult() {
     document.querySelector('.question-constainer').remove()
   if (document.querySelector('.footer'))
     document.querySelector('.footer').remove()
-  percent = (score * 100) / 50
+  if (test == 0) percent = (score * 100) / 50
+  if (test == 1) percent = (score * 100) / 20
   let howWas = "ضعيف جدأ";
   if (percent > 40) howWas = "ضعيف"
   if (percent > 50) howWas = "مقبول"
@@ -1211,7 +1212,7 @@ function getResult() {
             <h1>النتيجة النهائية</h1>
             <h1 class="result">${percent.toFixed(1)}%</h1>
             <h1 class="how-was">${howWas}</h1>
-            <p>لقد حصلت على ${score} نقطة من ${(50)} نقطة حيث يساوي ${percent}%</p>
+            <p>لقد حصلت على ${score} نقطة من ${(test === 0) ? 50 : 20} نقطة حيث يساوي ${percent}%</p>
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
             <div class="writing-result">
             <h2>
