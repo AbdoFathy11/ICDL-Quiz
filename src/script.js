@@ -1216,7 +1216,7 @@ function getResult() {
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
             <div class="writing-result">
             <h2>
-            إجابتك علي السؤال المقالي
+            ${(test === 0)? `            إجابتك علي السؤال المقالي
             </h2>
             <p>${writingAns}</p>
             <h2>
@@ -1224,7 +1224,8 @@ function getResult() {
             </h2>
             <p>${writingCorrAns}</p>
             </div>
-            <p>حيث حصلت على ${writingPoints} من النقاط</P>
+            <p>حيث حصلت على ${writingPoints} من النقاط</P>` : ""}
+
             <div class="re">
                 <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
                 <button id="reload-btn">مرة أًخرى</button>
