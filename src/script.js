@@ -1,197 +1,197 @@
 const questions = [
-  // {
-  //   arabic: {
-  //     question: 'أي من الاتي يًعد سوفت وير ؟',
-  //     options: [
-  //       'برامج الكمبيوتر',
-  //       'الشبكة اللاسلكية',
-  //       'وحدة التخزين الخارجية',
-  //       'الجهاز الملحق',
-  //     ],
-  //     correctAnswer: 0, // الإجابة أول عنصر في المصفوفة "برامج الكمبيوتر" لذلك 0 يشير إليها
-  //   },
-  //   english: {
-  //     question: 'Which one of the following answers is software ?',
-  //     options: [
-  //       'Computer Programs',
-  //       'A Wireless Network',
-  //       'An External Storage',
-  //       'An Accessory Device',
-  //     ],
-  //     correctAnswer: 0,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question: 'أي من الاتي يصف شبكة لاسلكية تحتاج إلى كلمة مرور للوصول لها ؟',
-  //     options: ['شبكة مغلقة', 'شبكة محمية', 'شبكة معطلة', 'شبكة مفتوحة'],
-  //     correctAnswer: 1,
-  //   },
-  //   english: {
-  //     question:
-  //       'Which one of the following answers describes a wireless network that requires a password to access it ?',
-  //     options: [
-  //       'Closed Network',
-  //       'Protected Network',
-  //       'Disabled Network',
-  //       'Open Network',
-  //     ],
-  //     correctAnswer: 1,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question: 'أي مما يلي هو أفضل وصف يوضح الغرض الأساسي من شبكات الحاسوب ؟',
-  //     options: [
-  //       'لتشغيل الموسيقى',
-  //       'لإنشاء شاشة توقف',
-  //       'لمشاركة البينات والأجهزة والوصول الامن',
-  //       'للتنقل فيما بين البرامج',
-  //     ],
-  //     correctAnswer: 2,
-  //   },
-  //   english: {
-  //     question:
-  //       'Which one of the following answers is the best describtion that show the main purpose of computer network ?',
-  //     options: [
-  //       'To Play Music',
-  //       'To Create a Screen Saver',
-  //       'To Share and Access Data and Devices Securely',
-  //       'Mobility between Programs',
-  //     ],
-  //     correctAnswer: 2,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question:
-  //       'أي من العبارات الاتية يعد صحيحاً عن الشبكة العنكبوتية (الإنترنت) ؟',
-  //     options: [
-  //       'مجموعة كبيرة من المستندات',
-  //       'شبكة ضخمة من أجهزة الحاسوب المرتبطة ببعضها البعض ومنتشرة حول العالم',
-  //       'مجموعة من صفحات الويب',
-  //       'لغة برمجة بسيطة تستخدم المتصفحات لعرض صفحات الويب',
-  //     ],
-  //     correctAnswer: 1,
-  //   },
-    // english: {
-    //   question: 'Which one of the following answers is true about internet ?',
-    //   options: [
-    //     'A Large Collection of Documents',
-    //     'A network of computers connected to each other and distributed around the world',
-    //     'A collection of web pages',
-    //     'A simple programming language that uses browsers to display web pages',
-    //   ],
-    //   correctAnswer: 1,
-    // },
-  // },
-  // {
-  //   arabic: {
-  //     question: 'أي من المهام الاتية يمكن ان يًنفذ بإستخدام التطبيقات الاتية ؟',
-  //     options: [
-  //       'تقديم الدعم الفني للشبكات',
-  //       'تشغيل الحاسب الالي',
-  //       'إدارة المكونات المادية للحاسوب',
-  //       'معالجة النصوص',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  //   english: {
-  //     question:
-  //       'Which one of the following tasks can be implemented using on of the following application ?',
-  //     options: [
-  //       'Provide techneical support for networks',
-  //       'Turn on computer',
-  //       'Manage the physical components of the computer',
-  //       'Word processing',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question: 'أي من الطرق الاتية تساعد على تحسين أداء الحاسوب ؟',
-  //     options: [
-  //       'إضافة برامج جديدة',
-  //       'تشغيل جميع التطبيقات في ان واحد',
-  //       'إضافة جهاز modem ',
-  //       'إضافة رامات جدبدة',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  //   english: {
-  //     question:
-  //       'Which one of the following tasks can be implemented using on of the following application ?',
-  //     options: [
-  //       'Add new programs',
-  //       'Run all applications at once ',
-  //       'Add a modern device',
-  //       'Add a new RAMs',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question:
-  //       'أي من اسماء الملفات التالية هي تسمية جيدة لملف يحتوي على سجلات مبيعات لشهر يناير ؟',
-  //     options: [
-  //       'Sales.accdb',
-  //       'JanuarySales.accdb',
-  //       'January_Sales_.accdb',
-  //       'January$_%Sales.accdb',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  //   english: {
-  //     question:
-  //       'Which one of the following file name is approoriate for contain sales records for month january ?',
-  //     options: [
-  //       'Sales.accdb',
-  //       'JanuarySales.accdb',
-  //       'January_Sales_.accdb',
-  //       'January$_%Sales.accdb',
-  //     ],
-  //     correctAnswer: 3,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question: 'أي من الاتي يعطي الحق للمستخدم لاستخدام البرامج التطبيقية ؟',
-  //     options: ['تصريح', 'ترخيص', 'حقوق الطبع والنشر', 'توكيل'],
-  //     correctAnswer: 1,
-  //   },
-  //   english: {
-  //     question:
-  //       'ًWhich one if the following gives an end user the right to use software application ?',
-  //     options: ['A Permit', 'A License', 'A Copyright', 'An Authorization'],
-  //     correctAnswer: 1,
-  //   },
-  // },
-  // {
-  //   arabic: {
-  //     question:
-  //       'أي من خيارات الطباعة الاتية نختار عندما نريد طباعة صفحة معروضة أمامك داخل أحد المستندات ؟',
-  //     options: [
-  //       'الصفحة الحالية',
-  //       'مادة الطباعة',
-  //       'ملائمة حجم الورقة',
-  //       'عدد الصفحات في الورقة',
-  //     ],
-  //     correctAnswer: 0,
-  //   },
-  //   english: {
-  //     question:
-  //       'ًWhich one the following options to print the active page in open document ?',
-  //     options: [
-  //       'Current page',
-  //       'Print What ',
-  //       'Proper size paper',
-  //       'Number of pages per sheet',
-  //     ],
-  //     correctAnswer: 0,
-  //   },
-  // },
+  {
+    arabic: {
+      question: 'أي من الاتي يًعد سوفت وير ؟',
+      options: [
+        'برامج الكمبيوتر',
+        'الشبكة اللاسلكية',
+        'وحدة التخزين الخارجية',
+        'الجهاز الملحق',
+      ],
+      correctAnswer: 0, // الإجابة أول عنصر في المصفوفة "برامج الكمبيوتر" لذلك 0 يشير إليها
+    },
+    english: {
+      question: 'Which one of the following answers is software ?',
+      options: [
+        'Computer Programs',
+        'A Wireless Network',
+        'An External Storage',
+        'An Accessory Device',
+      ],
+      correctAnswer: 0,
+    },
+  },
+  {
+    arabic: {
+      question: 'أي من الاتي يصف شبكة لاسلكية تحتاج إلى كلمة مرور للوصول لها ؟',
+      options: ['شبكة مغلقة', 'شبكة محمية', 'شبكة معطلة', 'شبكة مفتوحة'],
+      correctAnswer: 1,
+    },
+    english: {
+      question:
+        'Which one of the following answers describes a wireless network that requires a password to access it ?',
+      options: [
+        'Closed Network',
+        'Protected Network',
+        'Disabled Network',
+        'Open Network',
+      ],
+      correctAnswer: 1,
+    },
+  },
+  {
+    arabic: {
+      question: 'أي مما يلي هو أفضل وصف يوضح الغرض الأساسي من شبكات الحاسوب ؟',
+      options: [
+        'لتشغيل الموسيقى',
+        'لإنشاء شاشة توقف',
+        'لمشاركة البينات والأجهزة والوصول الامن',
+        'للتنقل فيما بين البرامج',
+      ],
+      correctAnswer: 2,
+    },
+    english: {
+      question:
+        'Which one of the following answers is the best describtion that show the main purpose of computer network ?',
+      options: [
+        'To Play Music',
+        'To Create a Screen Saver',
+        'To Share and Access Data and Devices Securely',
+        'Mobility between Programs',
+      ],
+      correctAnswer: 2,
+    },
+  },
+  {
+    arabic: {
+      question:
+        'أي من العبارات الاتية يعد صحيحاً عن الشبكة العنكبوتية (الإنترنت) ؟',
+      options: [
+        'مجموعة كبيرة من المستندات',
+        'شبكة ضخمة من أجهزة الحاسوب المرتبطة ببعضها البعض ومنتشرة حول العالم',
+        'مجموعة من صفحات الويب',
+        'لغة برمجة بسيطة تستخدم المتصفحات لعرض صفحات الويب',
+      ],
+      correctAnswer: 1,
+    },
+    english: {
+      question: 'Which one of the following answers is true about internet ?',
+      options: [
+        'A Large Collection of Documents',
+        'A network of computers connected to each other and distributed around the world',
+        'A collection of web pages',
+        'A simple programming language that uses browsers to display web pages',
+      ],
+      correctAnswer: 1,
+    },
+  },
+  {
+    arabic: {
+      question: 'أي من المهام الاتية يمكن ان يًنفذ بإستخدام التطبيقات الاتية ؟',
+      options: [
+        'تقديم الدعم الفني للشبكات',
+        'تشغيل الحاسب الالي',
+        'إدارة المكونات المادية للحاسوب',
+        'معالجة النصوص',
+      ],
+      correctAnswer: 3,
+    },
+    english: {
+      question:
+        'Which one of the following tasks can be implemented using on of the following application ?',
+      options: [
+        'Provide techneical support for networks',
+        'Turn on computer',
+        'Manage the physical components of the computer',
+        'Word processing',
+      ],
+      correctAnswer: 3,
+    },
+  },
+  {
+    arabic: {
+      question: 'أي من الطرق الاتية تساعد على تحسين أداء الحاسوب ؟',
+      options: [
+        'إضافة برامج جديدة',
+        'تشغيل جميع التطبيقات في ان واحد',
+        'إضافة جهاز modem ',
+        'إضافة رامات جدبدة',
+      ],
+      correctAnswer: 3,
+    },
+    english: {
+      question:
+        'Which one of the following tasks can be implemented using on of the following application ?',
+      options: [
+        'Add new programs',
+        'Run all applications at once ',
+        'Add a modern device',
+        'Add a new RAMs',
+      ],
+      correctAnswer: 3,
+    },
+  },
+  {
+    arabic: {
+      question:
+        'أي من اسماء الملفات التالية هي تسمية جيدة لملف يحتوي على سجلات مبيعات لشهر يناير ؟',
+      options: [
+        'Sales.accdb',
+        'JanuarySales.accdb',
+        'January_Sales_.accdb',
+        'January$_%Sales.accdb',
+      ],
+      correctAnswer: 3,
+    },
+    english: {
+      question:
+        'Which one of the following file name is approoriate for contain sales records for month january ?',
+      options: [
+        'Sales.accdb',
+        'JanuarySales.accdb',
+        'January_Sales_.accdb',
+        'January$_%Sales.accdb',
+      ],
+      correctAnswer: 3,
+    },
+  },
+  {
+    arabic: {
+      question: 'أي من الاتي يعطي الحق للمستخدم لاستخدام البرامج التطبيقية ؟',
+      options: ['تصريح', 'ترخيص', 'حقوق الطبع والنشر', 'توكيل'],
+      correctAnswer: 1,
+    },
+    english: {
+      question:
+        'ًWhich one if the following gives an end user the right to use software application ?',
+      options: ['A Permit', 'A License', 'A Copyright', 'An Authorization'],
+      correctAnswer: 1,
+    },
+  },
+  {
+    arabic: {
+      question:
+        'أي من خيارات الطباعة الاتية نختار عندما نريد طباعة صفحة معروضة أمامك داخل أحد المستندات ؟',
+      options: [
+        'الصفحة الحالية',
+        'مادة الطباعة',
+        'ملائمة حجم الورقة',
+        'عدد الصفحات في الورقة',
+      ],
+      correctAnswer: 0,
+    },
+    english: {
+      question:
+        'ًWhich one the following options to print the active page in open document ?',
+      options: [
+        'Current page',
+        'Print What ',
+        'Proper size paper',
+        'Number of pages per sheet',
+      ],
+      correctAnswer: 0,
+    },
+  },
   {
     arabic: {
       question: 'أي من الأقراص الصلبة يًعد أكبر سعة تخزينية ؟',
