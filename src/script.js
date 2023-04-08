@@ -954,11 +954,10 @@ function postQuestion(question) {
       questionContainer.innerHTML = `
         <div class="question">${writing[language]['question']}</div>
         <div class="options">
-            <textarea id="writing-in" cols="30" rows="4" placeholder="${
-              language == 'english'
-                ? 'write your answer here !'
-                : 'أكتب إجابتك هنا!'
-            }"></textarea>
+            <textarea id="writing-in" cols="30" rows="4" placeholder="${language == 'english'
+          ? 'write your answer here !'
+          : 'أكتب إجابتك هنا!'
+        }"></textarea>
         </div>
         `
       document
@@ -976,13 +975,12 @@ function postQuestion(question) {
     const ans = question[1]
     const optionsHTML = thequestion.options
       .map((option, index) => {
-        return `<div class="option" ${
-          thequestion.correctAnswer == index
+        return `<div class="option" ${thequestion.correctAnswer == index
             ? 'style="background: #04dd71;"'
             : ans == index && ans != answer
-            ? 'style="background: #b8002a;"'
-            : ''
-        } data-id="${index}">${option}</div>`
+              ? 'style="background: #b8002a;"'
+              : ''
+          } data-id="${index}">${option}</div>`
       })
       .join('')
     questionContainer.innerHTML = `
@@ -1040,7 +1038,7 @@ nextBtn.addEventListener('click', (e) => {
     postQuestion(randomQuestion)
     e.target.setAttribute('disabled', '')
   } else {
-    if (writingDone) {getResult()} else {
+    if (writingDone) { getResult() } else {
       if (answer === randomQuestion[language].correctAnswer) score++
     }
     if (
@@ -1088,14 +1086,14 @@ nextBtn.addEventListener('click', (e) => {
               postQuestion()
               document.getElementById('writing-in')
                 ? document
-                    .getElementById('writing-in')
-                    .addEventListener('input', (e) =>
-                      e.target.value.length > 0
-                        ? nextBtn.removeAttribute('disabled')
-                        : nextBtn.setAttribute('disabled', ''),
-                    )
+                  .getElementById('writing-in')
+                  .addEventListener('input', (e) =>
+                    e.target.value.length > 0
+                      ? nextBtn.removeAttribute('disabled')
+                      : nextBtn.setAttribute('disabled', ''),
+                  )
                 : null
-                writingDone = true
+              writingDone = true
             } else getResult()
           } else {
             previuos.push([randomQuestion, answer])
@@ -1154,7 +1152,7 @@ function secondsToTime(seconds) {
 
   return `${paddedHours}:${paddedMinutes}:${paddedSeconds}`
 }
-let timer = 300
+let timer = 600
 const timerDiv = document.querySelector('.timer')
 
 const timing = setInterval(() => {
@@ -1189,27 +1187,24 @@ function getResult() {
         <div class="box">
 
             <h1>النتيجة النهائية</h1>
-            ${
-              studentInfo &&
-              `
+            ${studentInfo &&
+    `
             <div class="student-info">
             <h5>إسم الطالب: ${studentInfo.name}</h5>
             <h5>الفرقة: ${studentInfo.grad}</h5>
             <h5>الشعبة: ${studentInfo.branch}</h5>
             </div>
             `
-            }
+    }
             <h1 class="result">${percent.toFixed(1)}%</h1>
             <h1 class="how-was">${howWas}</h1>
-            <p>لقد حصلت على ${score} نقطة من ${
-    test === 0 ? 50 : 20
-  } نقطة حيث يساوي ${percent}%</p>
+            <p>لقد حصلت على ${score} نقطة من ${test === 0 ? 50 : 20
+    } نقطة حيث يساوي ${percent}%</p>
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
             <div class="writing-result">
             <h2>
-            ${
-              test === 0
-                ? `            إجابتك علي السؤال المقالي
+            ${test === 0
+      ? `            إجابتك علي السؤال المقالي
             </h2>
             <p>${writingAns}</p>
             <h2>
@@ -1218,8 +1213,8 @@ function getResult() {
             <p>${writingCorrAns}</p>
             </div>
             <p>حيث حصلت على ${writingPoints} من النقاط</P>`
-                : ''
-            }
+      : ''
+    }
 
             <div class="re">
                 <p>يمكنك دخول الإختبار مرة أًخرى بضغطك على <span>مرة أًخرى</span> في الأسفل</p>
