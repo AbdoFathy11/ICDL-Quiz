@@ -1202,13 +1202,13 @@ function getResult() {
             <h1 class="result">${percent.toFixed(1)}%</h1>
             <h1 class="how-was">${howWas}</h1>
             <p>لقد حصلت على ${score} نقطة من ${
-    test === 0 ? 50 : 20
+    test == 0 ? 50 : 20
   } نقطة حيث يساوي ${percent}%</p>
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
             <div class="writing-result">
             <h2>
             ${
-              test === 0
+              test == 0
                 ? `            إجابتك علي السؤال المقالي
             </h2>
             <p>${writingAns}</p>
