@@ -1083,6 +1083,7 @@ nextBtn.addEventListener('click', (e) => {
           if (test == 0 && questions.length <= 0) {
             nextBtn.setAttribute('data-id', 'writing')
             if (!writingDone) {
+              writingDone = true
               postQuestion()
               document.getElementById('writing-in')
                 ? document
@@ -1093,7 +1094,6 @@ nextBtn.addEventListener('click', (e) => {
                       : nextBtn.setAttribute('disabled', ''),
                   )
                 : null
-              writingDone = true
             } else getResult()
           } else {
             previuos.push([randomQuestion, answer])
@@ -1198,13 +1198,15 @@ function getResult() {
     }
             <h1 class="result">${percent.toFixed(1)}%</h1>
             <h1 class="how-was">${howWas}</h1>
-            <p>لقد حصلت على ${score} نقطة من ${test === 0 ? 50 : 20
-    } نقطة حيث يساوي ${percent}%</p>
+            <p>لقد حصلت على ${score} نقطة من ${
+    test == 0 ? 50 : 20
+  } نقطة حيث يساوي ${percent}%</p>
             <p>حظاً موفقا ونتمنى لك النجاح دائما</p>
             <div class="writing-result">
             <h2>
-            ${test === 0
-      ? `            إجابتك علي السؤال المقالي
+            ${
+              test == 0
+                ? `            إجابتك علي السؤال المقالي
             </h2>
             <p>${writingAns}</p>
             <h2>
