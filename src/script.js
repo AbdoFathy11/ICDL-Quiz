@@ -507,7 +507,7 @@ const questions = [
   },
   {
     arabic: {
-      question: 'بایت واحد یعادل لحفظ ملف نستخدم Save فقط',
+      question: 'لحفظ ملف نستخدم Save فقط',
       options: ['صح', 'خطأ'],
       correctAnswer: 1,
     },
