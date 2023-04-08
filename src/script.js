@@ -1083,6 +1083,7 @@ nextBtn.addEventListener('click', (e) => {
           if (test == 0 && questions.length <= 0) {
             nextBtn.setAttribute('data-id', 'writing')
             if (!writingDone) {
+              writingDone = true
               postQuestion()
               document.getElementById('writing-in')
                 ? document
@@ -1093,7 +1094,6 @@ nextBtn.addEventListener('click', (e) => {
                       : nextBtn.setAttribute('disabled', ''),
                   )
                 : null
-              writingDone = true
             } else getResult()
           } else {
             previuos.push([randomQuestion, answer])
