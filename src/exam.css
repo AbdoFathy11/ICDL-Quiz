@@ -376,3 +376,13 @@ textarea {
     border: 2px solid #093246;
     border-radius: 10%;
 }
+.student-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.student-info h5 {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}

@@ -1027,7 +1027,7 @@ function postQuestion(question) {
         <div class="options">${optionsHTML}</div>
     `
   } else {
-    const thequestion = question["arabic"]
+    const thequestion = question[language]
     const optionsHTML = thequestion.options
       .map((option, index) => {
         return `<div class="option" data-id="${index}">${option}</div>`
@@ -1199,10 +1199,18 @@ function getResult() {
   if (percent > 70) howWas = "جيد جدا"
   if (percent > 80) howWas = "ممتاز"
     if (percent >= 98) howWas = "فوق الممتاز"
-
+  const studentInfo = JSON.parse(localStorage.getItem("info"))
   resultContainer.innerHTML = `<div class="container">
         <div class="box">
+
             <h1>النتيجة النهائية</h1>
+            ${studentInfo && `
+            <div class="student-info">
+            <h5>إسم الطالب: ${studentInfo.name}</h5>
+            <h5>الفرقة: ${studentInfo.grad}</h5>
+            <h5>الشعبة: ${studentInfo.branch}</h5>
+            </div>
+            `}
             <h1 class="result">${percent.toFixed(1)}%</h1>
             <h1 class="how-was">${howWas}</h1>
             <p>لقد حصلت على ${score} نقطة من ${(test === 0) ? 50 : 20} نقطة حيث يساوي ${percent}%</p>
@@ -1242,4 +1250,4 @@ if (test == 0) {
 if (test == 0) {
   nextBtn.setAttribute("data-id", "writing")
 }
-document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", ""))
+document.getElementById("writing-in")? document.getElementById("writing-in").addEventListener('input',(e) => (e.target.value.length > 0)? nextBtn.removeAttribute("disabled"): nextBtn.setAttribute("disabled", "")): null
